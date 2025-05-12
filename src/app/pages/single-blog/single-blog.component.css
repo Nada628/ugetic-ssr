@@ -1,0 +1,98 @@
+.bg-img {
+    background-color: #777af212 ; 
+    height: 500px; 
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'bahij';
+}
+
+.blog-content {
+    padding: 20px;
+  }
+  
+ 
+  
+  @media (max-width: 768px) {
+    /* .fixed-right {
+      position: static;
+    } */
+  }
+  .mt-7{
+    margin-top: 7rem;
+}
+.ms-7{
+    margin-left: 5rem;
+}
+.blog-img img{
+    border-radius: 5px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+ a{
+    text-decoration: none;
+  }
+p,h2,h4, span, label{
+  font-family: 'bahij';
+}
+
+.button1 {
+  background: #d3a00f;
+  border: 1px solid #d3a00f;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'bahij';
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  min-height: 55px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #d3a00f 50%, white 50%);
+  transition: background-position 0.4s ease, color 0.4s ease; 
+  background-position: 0 0;
+  vertical-align: middle;
+  width: fit-content;
+}
+
+.button1:hover,
+.button1:active {
+  background-color: white;
+  background-position: -100% 0; 
+  color: #d3a00f;
+}
+
+.button1:active {
+  opacity: .5;
+}
+.blog-image {
+  width: 80px; 
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.recent-blogs{
+  margin-right: -2rem;
+}
+.blog-link {
+  text-decoration: none;
+  color: black; 
+}
+
+.blog-link:hover {
+  color: #f39c12; 
+}
+
+

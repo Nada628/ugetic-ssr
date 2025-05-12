@@ -1,0 +1,140 @@
+<app-navbar></app-navbar>
+<!-- part 1 -->
+ <section>
+    <div class="position-relative">
+        <!-- part 1 -->
+        <div class="bg-img position-relative" style="background-color: #e5e8f5; height: 100vh;">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white d-flex flex-column align-items-center">
+                <h2 class="fs-1 mb-4 text-blue">الأسئلة الشائعة</h2>
+                <div class="arrow-button mt-5">
+                    <i class="bi bi-arrow-down-circle fs-3 text-blue" 
+                       style=" cursor: pointer;"
+                       (click)="scrollTo()">
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+ </section>
+<!-- part2 -->
+<section>
+  <div class="container" id="section-faq" style="margin-top: -215px; width: 83%;" #scrolledSection data-aos="fade-up">
+    <!-- general Q -->
+    <div class="row" data-aos="fade-up">
+      <div class="col-12 col-md-6">
+        <div class="m-5">
+          <h4>الأسئلة العامة</h4>
+        </div>
+      </div>
+      <div class="col-12 col-md-5 m-2" data-aos="fade-up">
+        <div class="accordion mt-3" id="faqAccordionGeneral">
+          <div class="accordion-item mb-3" *ngFor="let faq of faqsGeneral; let i = index" data-aos="fade-up">
+            <h2 class="accordion-header" [id]="'headingGeneral' + i">
+              <button class="accordion-button" 
+                      [ngClass]="{'collapsed': !faq.isExpanded}" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      [attr.data-bs-target]="'#collapseGeneral' + i" 
+                      [attr.aria-expanded]="faq.isExpanded" 
+                      [attr.aria-controls]="'collapseGeneral' + i">
+                {{ faq.question }}
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" 
+                 [id]="'collapseGeneral' + i" 
+                 [ngClass]="{'show': faq.isExpanded}" 
+                 [attr.aria-labelledby]="'headingGeneral' + i" 
+                 data-bs-parent="#faqAccordionGeneral">
+              <div class="accordion-body">
+                {{ faq.answer }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="mx-auto" style="width: 85%;" >
+    
+    <!-- support Q -->
+    <div class="row mt-3" data-aos="fade-up">
+      <div class="col-12 col-md-6">
+        <div class="m-5">
+          <h4>أسئلة الدعم الفني</h4>
+        </div>
+      </div>
+      <div class="col-12 col-md-5 m-2" data-aos="fade-up">
+        <div class="accordion mt-3" id="faqAccordionSupport">
+          <div class="accordion-item mb-3" *ngFor="let faq of faqsSupport; let i = index" data-aos="fade-up">
+            <h2 class="accordion-header" [id]="'headingSupport' + i">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      [attr.data-bs-target]="'#collapseSupport' + i" aria-expanded="false" [attr.aria-controls]="'collapseSupport' + i">
+                {{ faq.question }}
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" [id]="'collapseSupport' + i" 
+                 [attr.aria-labelledby]="'headingSupport' + i" 
+                 data-bs-parent="#faqAccordionSupport">
+              <div class="accordion-body">
+                {{ faq.answer }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="mx-auto" style="width: 85%;" >
+    
+    <!-- follow up Q -->
+  <!-- أسئلة المتابعة -->
+<div class="row mt-3" data-aos="fade-up">
+  <div class="col-12 col-md-6">
+    <div class="m-5">
+      <h4>أسئلة المتابعة</h4>
+    </div>
+  </div>
+  <div class="col-12 col-md-5 m-2" data-aos="fade-up">
+    <div class="accordion mt-3" id="faqAccordionFollowUp">
+      <div class="accordion-item mb-3" *ngFor="let faq of faqsFollowUp; let i = index" data-aos="fade-up">
+        <h2 class="accordion-header" [id]="'headingFollowUp' + i">
+          <button class="accordion-button" 
+                  [ngClass]="{'collapsed': !faq.isExpanded}" 
+                  type="button" 
+                  data-bs-toggle="collapse" 
+                  [attr.data-bs-target]="'#collapseFollowUp' + i" 
+                  [attr.aria-expanded]="faq.isExpanded" 
+                  [attr.aria-controls]="'collapseFollowUp' + i">
+            {{ faq.question }}
+          </button>
+        </h2>
+        <div class="accordion-collapse collapse" 
+             [id]="'collapseFollowUp' + i" 
+             [ngClass]="{'show': faq.isExpanded}" 
+             [attr.aria-labelledby]="'headingFollowUp' + i" 
+             data-bs-parent="#faqAccordionFollowUp">
+          <div class="accordion-body">
+            {{ faq.answer }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <hr class="mx-auto" style="width: 85%;" >
+</section>
+
+
+
+ <!-- part3 -->
+  <app-give-us-call></app-give-us-call>
+
+   <!-- join-us -->
+   
+<app-join-us-block></app-join-us-block>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer></app-footer>

@@ -1,0 +1,32 @@
+.mt-6{
+    margin-top: 8rem;
+  }
+  .accordion-item {
+    margin-bottom: 1rem; 
+    border: 0.8px solid #e7e7e7; 
+    border-radius: 4px; 
+  }
+
+  .accordion-button {
+    border: none; 
+    background-color: #fff;
+    color: #132f55; 
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #132f55; 
+  }
+  .accordion-button::after{
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+  .accordion-body {
+    background-color: #fff; 
+  }
+ *{
+  font-family: 'bahij';
+ }
+ button{
+  text-align: right;
+ }

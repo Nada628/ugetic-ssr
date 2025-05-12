@@ -1,0 +1,111 @@
+<div class="container" id="bg-section">
+    <div class="row mt-5">
+        <div class="text-center">
+            <p class="text-secondary mb-0 fw-bold fs-5">
+                    {{"contact-us.cards.header"|translate}}
+            </p>
+            <p class="text-blue fw-semibold mb-0 mt-4 fs-2">
+                {{"contact-us.cards.desc1"|translate}}
+
+            </p>
+            <p class=" text-blue fw-semibold fs-2">
+                {{"contact-us.cards.desc2"|translate}}
+
+            </p>
+        </div>
+
+    </div>
+    <!-- cards -->
+    <div class="container">
+        <div class="row mt-5 justify-content-center"> 
+            <div class="col-12 col-md-3 mb-4">
+              <div class="card text-center shadow border-0 h-100  custome-card">
+                <div class="card-body">
+                        <i class="fa-brands fa-rocketchat fa-2x mb-3 mt-5" style="color: #21416f;"></i> 
+                        <h5 class="card-title" style="color: #132f55;">
+                            {{"contact-us.cards.card1.title"|translate}}  
+                        </h5>
+                        <p class="card-text fw-semibold">
+                            <a [href]="'https://wa.me/' + supportNumber" target="_blank" class="text-secondary ">
+                              {{ 'contact-us.cards.card2.desc1' | translate }}
+                            </a>
+                          </p>
+                          
+                          
+                          
+                    
+                        <p class="card-text fw-semibold">
+                            <a href="mailto:sales@ugitec.com" class="text-secondary">
+                              {{ 'contact-us.cards.card1.desc2' | translate }}
+                            </a>
+                          </p>
+                          
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-4">
+              <div class="card text-center shadow border-0 h-100  custome-card">
+                <div class="card-body">
+                        <i class="fa-solid fa-phone-volume fa-2x mb-3 mt-5" style="color: #21416f;"></i> 
+                        <h5 class="card-title" style="color: #132f55;">
+                            {{"contact-us.cards.card2.title"|translate}}  
+                        </h5>
+                        <p class="card-text fw-semibold">
+                            <a [href]="'https://wa.me/' + supportNumber" target="_blank" class="text-secondary ">
+                              {{ 'contact-us.cards.card2.desc1' | translate }}
+                            </a>
+                          </p>
+                       
+                        <p class="card-text fw-semibold">
+                            <a href="mailto:support@ugitc.com" class="text-secondary">
+                              {{ 'contact-us.cards.card2.desc2' | translate }}
+                            </a>
+                          </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-4">
+              <div class="card text-center shadow border-0 h-100  custome-card">
+                <div class="card-body">
+                        <i class="fa-brands fa-facebook fa-2x mb-3 mt-5" style="color: #21416f;"></i> 
+                        <h5 class="card-title" style="color: #132f55;">
+                            {{"contact-us.cards.card3.title"|translate}}  
+                        </h5>                        
+                        <div class="d-flex justify-content-center mt-3 social-icons">
+                            <a *ngFor="let icon of social" [href]="icon.link" target="_blank" class="mx-2 text-secondary icon">
+                              <i class="fab fa-facebook-f" *ngIf="icon.name === 'facebook'"></i>
+                              <i class="fab fa-twitter" *ngIf="icon.name === 'X'"></i>
+                              <i class="fab fa-linkedin-in" *ngIf="icon.name === 'linkedin'"></i>
+                              <i class="fa-brands fa-youtube" *ngIf="icon.name === 'youtube'"></i>
+                              <i class="fa-brands fa-instagram" *ngIf="icon.name === 'instagram'"></i>
+                            </a>
+                          </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-4">
+              <div class="card text-center shadow border-0 h-100  custome-card">
+                <div class="card-body">
+                        <i class="fa-solid fa-headset fa-2x mb-3 mt-5" style="color: #21416f;"></i> 
+                        <h5 class="card-title" style="color: #132f55;">
+                            {{"contact-us.cards.card4.title"|translate}}  
+                        </h5>                        
+                        <p class="card-text fw-semibold">
+                            <a [href]="'https://wa.me/' + infoNumber" target="_blank" class="text-secondary ">
+                              {{ 'contact-us.cards.card4.desc1' | translate }}
+                            </a>
+                          </p>
+                       
+                          <p class="card-text fw-semibold">
+                            <a href="mailto:info@ugitc.com" class="text-secondary">
+                              {{ 'contact-us.cards.card4.desc2' | translate }}
+                            </a>
+                          </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

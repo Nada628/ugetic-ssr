@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+
+    <!-- part 1 -->
+    <div class="bg-img position-relative">
+        <img [ngSrc]="'../../../assets//images//home/about-us-creative.jpg'" class="w-100" alt="About Us" loading="lazy" width="1500" height="620">
+        <div class="position-absolute mt-1 top-50 start-50 translate-middle text-center text-white d-flex flex-column align-items-center">
+            <p class="fs-1 fw-bold mb-4">Latest news and ideas from our team.  </p>
+            <p class="fs-6 fw-semibold mt-0">This is where you can find the latest news and insights about Sway — new products.</p>
+          
+            <p class=" fs-6 text-center fw-semibold "> 
+                in-depth interviews and successfully finished projects. Never miss a beat.
+            </p>   
+            <div class="arrow-button mt-5">
+                <i class="bi bi-arrow-down-circle fs-3  " 
+                 style="color: white; cursor: pointer;"
+                 (click)="scrollTo()"
+                 ></i>
+
+        </div>
+            
+          
+    </div> 
+       <!-- wave -->
+       <app-waves-shape></app-waves-shape>
+    </div>
+  
+    <!-- cards -->
+    <div class="container my-5 w-75" #scrolledSection>
+       
+        <div class="row">
+            <div
+              class="col-md-4 mb-4"
+              *ngFor="let blog of blogs"
+            >
+              <div class="card hover-card" >
+                    <img [src]="blog.image ? '../../../assets/images/home/blogs/' + blog.image : '../../../assets/images/home/blogs/page_blog_standard_1-400x250.jpg'" 
+                    class="card-img-top" 
+                    alt="Card Image" 
+                    [routerLink]="['/single-blog', blog.id]" style="cursor: pointer;"
+                    
+                    />
+                    <div class="card-body">
+                    <button class="btn card-title-btn mt-3">
+                      <i class="fas fa-circle"></i> 
+                      {{ blog.category.name }}
+                    </button>
+                    <p class="card-text mt-4 text-blue fs-5 fw-bold" [routerLink]="['/single-blog', blog.id]" style="cursor: pointer;">
+                      {{ blog.title }}
+                    </p>
+                    <div class="icon-line mb-3">
+                      <span class="icon-wrapper">
+                        <i class="fa-regular fa-clock" style="color: #d3a00f;"></i>
+                        <span class="icon-text me-2">{{ blog.created_at | date: 'yyyy-MM-dd' }}</span>
+                      </span>
+                      <span class="icon-wrapper me-2">
+                        <i class="fa-solid fa-pen " style="color: #d3a00f;"></i>
+                        <span class="icon-text me-2">{{ blog.author  || 'Author'}}</span>
+                      </span>
+                      <span class="icon-wrapper me-2">
+                        <i class="fa-regular fa-comment " style="color: #d3a00f;"></i>
+                        <span class="icon-text me-2"></span>
+                      </span>
+                    </div>
+                  <p class="card-text text-secondary fw-semibold">
+                    {{ blog.description }}
+                  </p>
+                  <button class="btn button1" [routerLink]="['/single-blog', blog.id]">Read More</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+      
+    </div>
+
+   
+      
+<app-pop-up-offers></app-pop-up-offers>
+
+
+<app-footer></app-footer>

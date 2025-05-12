@@ -1,0 +1,78 @@
+*{
+    font-family: 'bahij';
+}
+
+
+  
+.bg{
+    background: linear-gradient(to right, #21416f, #1261b0);
+}
+.me-custome{
+    margin-right: 7rem;
+}
+.my-custom{
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    line-height: 1.8em;
+}
+.my-custom-btn {
+    margin-top: 8rem;
+    margin-bottom: 7rem;
+    margin-right: 18rem;
+}
+.button1 {
+    background: #d3a00f;
+    border: 1px solid #d3a00f;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'bahij';
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    min-height: 55px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #d3a00f 50%, white 50%);
+    transition: background-position 0.4s ease, color 0.4s ease; 
+    background-position: 0 0;
+    vertical-align: middle;
+    width: 30%;
+  }
+  
+  .button1:hover,
+  .button1:active {
+    background-color: white;
+    background-position: -100% 0; 
+    color: #d3a00f;
+  }
+  
+  .button1:active {
+    opacity: .5;
+  }
+  @media(max-width:500px){
+    .me-custome{
+        font-size: 1rem !important;
+        margin-right: 1.5rem !important;
+    }
+    .my-custom{
+        margin-top: 3rem;
+        margin-bottom:  0rem !important;
+        line-height: 1.8em;
+    }
+    .my-custom-btn {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        margin-right:  2rem !important;
+    }
+    .button1{
+        width: 45%;
+    }
+  }

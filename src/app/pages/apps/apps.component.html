@@ -1,0 +1,86 @@
+<app-navigation-bar></app-navigation-bar>
+
+<app-header
+ class="mb-5" 
+ [headerKey]="dynamicSectionData.headerKey"
+    [rotatingTextKeys]="dynamicSectionData.rotatingTextKeys"
+    [staticTextKey]="dynamicSectionData.staticTextKey"
+    [watchButtonKey]="dynamicSectionData.watchButtonKey"
+    [downloadButtonKey]="dynamicSectionData.downloadButtonKey"
+    [imageUrl]="dynamicSectionData.imageUrl"
+ >
+</app-header>
+
+<!-- <app-side-bar></app-side-bar> -->
+<app-trusted-by class="mt-5"></app-trusted-by>
+
+<app-eom-feature1 
+  id="features"
+  [headerTextKey]="'تصميمات عصرية لتطبيقات تلبي طموحاتك'"
+  [paragraphTextKey]="'التطبيقات من أهم الأدوات التي تساهم في تعزيز الأعمال وتوسيع نطاق وصول العملاء ومعنا ستجد حلول تجمع بين سهولة الاستخدام والأمان العالي، لضمان تقديم تجربة متميزة للعملاء وزيادة ولائهم لعلامتك التجارية'"
+  [cards]="featureCards"
+></app-eom-feature1>
+
+<app-featureTwoThree id="apps"  [featureTwoHeaderKey]="featureTwoData.headerKey"
+[featureTwoDescKey]="featureTwoData.descKey"
+[featureTwoItems]="featureTwoData.items"
+[featureTwoImageUrl]="featureTwoData.imageUrl"
+
+[featureThreeHeaderKey]="featureThreeData.headerKey"
+[featureThreeDescKey]="featureThreeData.descKey"
+[featureThreeItems]="featureThreeData.items"
+[featureThreeImageUrl]="featureThreeData.imageUrl">
+</app-featureTwoThree>
+
+<app-tabs [tabs]="tabsData"
+          [tabsMetadata]="tabsMetadata"
+          parentComponent="AppsComponent">
+</app-tabs>
+<app-dynamic-services-card
+
+  [title]="'كفاءة أفضل في اتخاذ القرارات'"
+  [desc1]="'نضمن لك عمل التطبيق بكفاءة مما يساعد على استقرار أدائه بل وتطوره بما يخدم متطلبات عملك، مع اتاحة فرصة للحصول على تقييمات عملائك بما ساعدك على تقييم خدماتك وتطويرها.'"
+  [desc2]="''"
+  
+  [card1Title]="'المراجعات والتقييمات'"
+  [card1Desc1]="' إضافة نظام لتقييم المنتجات أو الخدمات، مما يمكن عملاء من تقديم آرائهم وملاحظاتهم، ويساعد في تحسين جودة الخدمة.'"
+
+  [card2Title]="'التحديثات الدورية: '"
+  [card2Desc1]="'سيكون تطبيقك دائم التحديث على جميع منصات الأندوريد أو IOS ، مما يضمن لك العمل بكفاءة.'"
+ 
+
+  [card3Title]="'تجارب الواقع المعزز (AR) أو الافتراضي (VR):'"
+  [card3Desc1]="'استخدام تكنولوجيا AR أو VR لتقديم تجارب فريدة مثل عرض المنتجات في بيئات افتراضية، مما يعزز من تجربة التسوق.'"
+
+></app-dynamic-services-card>
+<!-- <app-pop-up-offers></app-pop-up-offers> -->
+<app-reviews  id="reviews"></app-reviews>
+
+<app-block-faq
+  [title]="'الأسئلة الشائعة '"
+  [faqs]="[
+    { question: 'ما هي تكلفة إنشاء تطبيق؟', 
+     answer: 'تكلف تصميم تطبيق تختلف من مجال لمجال آخر، ومن عميل لعميل آخر، بناء على الاحتياجات والمتطلبات التي يريد توفرها في التطبيق، ولهذا يمكنك التواصل معنا، وتحديد احتياجاتك وسيتم تقديم عرض سعر بناء على مواصفات تطبيقك. ' },
+    
+     { question: 'كيف استطيع صنع تطبيق؟     ',
+      answer: 'هناك العديد من الشركات التي تقدم خدمة تصميم التطبيقات، وهناك أيضا أدوات تساعدك على ذلك، لكن مع يوجيتك ستحصل على تصميم مميز بسعر تنافسي، وخالي من الأخطاء والمشاكل البرمجية التي تسببها أدوات الذكاء الاصطناعي. ' },
+    
+    { question: 'كم من الوقت يستغرق تصميم تطبيق؟    ',
+      answer: 'يعتمد على مدى تعقيد التطبيق. يمكن أن يستغرق تصميم تطبيق بسيط من بضعة أسابيع إلى شهر، بينما قد تستغرق التطبيقات الكبيرة والمخصصة عدة أشهر.' },
+
+      {question:'هل يجب عليّ تصميم تطبيق أصلي (Native) أم تطبيق متعدد الأنظمة (Cross-platform)؟      ',
+      answer:'التطبيقات الأصلية تعمل بشكل أفضل على نظام تشغيل محدد (مثل iOS أو Android) ولكن تتطلب تطويرًا منفصلاً لكل نظام. أما التطبيقات متعددة الأنظمة، فتعمل على كل الأنظمة بتطوير واحد، لكن قد تكون أقل كفاءة في بعض الأحيان.'}
+  ]"
+  imageSrc="../../../assets/images/home/faq/faq.jpg"
+></app-block-faq>
+<app-home-call-to-action 
+[title]="'انضم إلى مئات العملاء الراضين - اشترك الآن!'"
+[button]="'تواصل معنا'"
+>
+</app-home-call-to-action>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer id="contact"></app-footer>
+
+

@@ -1,0 +1,97 @@
+<div class="container round-container-about mt-5"  id="about">
+    <div class="row mt-md-5 mt-0">
+
+
+        <div class="col-lg-6 col-md-9 col-sm-10">
+            <div  class="me-5 mt-12">
+                <p class="text-blue fs-3 fw-bold">
+                    {{title}}
+                </p>
+                <p class=" text-blue w-75 fs-6 mt-4">
+                        {{desc1}}                
+                 </p>
+                <p class=" text-blue w-75 fs-6 mt-4">
+                  {{desc2}}  
+                </p>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <button class="button2 mt-5 mt-md-1"> {{"home.download-btn"|translate}} </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+          
+         
+           
+        </div>
+
+        <div class="col-lg-6 col-md-9 col-sm-10"> 
+            <section class="services-section">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    
+              
+                    <div class="col-lg-6 col-md-9 col-sm-10">
+                      <div class="row">
+                        <!-- الكارت الأول على اليمين -->
+                        <div class="col-12">
+                          <div class="service-card social-content">
+                            <div class="icon-box  ">
+                              <img [src]="card1Image ? card1Image : '../../../../assets/images/home/mobile-size/إدارة المشاريع الهندسية.svg'" />                            </div>
+                            <p class="my-3">
+                              {{ card1Title }}
+                            </p>
+                            <p class="my-3">
+                              {{ card1Desc1 }}
+                            </p>
+                            <!-- <a href="#">Learn More</a> -->
+                          </div>
+                        </div>
+              
+                        <!-- الكارت الثاني على اليمين -->
+                        <div class="col-12">
+                          <div class="service-card seo-sem">
+                            <div class="icon-box  ">
+                                <img [src]=" card2Image ? card2Image : '../../../../assets/images/home/mobile-size/نظام إدارة العملاء.svg'"  />
+                              </div>
+                              <p class="my-3">
+                               {{card2Title}}
+                              </p>
+                              <p class="my-3">
+                                {{ card2Desc1 }}
+                            </p>
+                              <!-- <a href="#">Learn More</a> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-9 col-sm-10">
+                        <div class="row">
+                          <!-- الكارت اليسار -->
+                          <div class="col-12 mt-6">
+                            <div class="service-card print-design">
+                                <div class="icon-box  ">
+                                    <img [src]=" card3Image ? card3Image: '../../../../assets/images/home/mobile-size/نظام حسابات مبسط.svg'"  />
+                                  </div>
+                                  <p class="my-3">
+                                    {{ card3Title }}
+      
+                                  </p>
+                                  <p class="my-3">
+                                    {{ card3Desc1 }}
+                                </p>
+                                  <!-- <a href="#">Learn More</a> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </section>
+              
+        </div>
+    </div>
+</div>

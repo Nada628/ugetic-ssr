@@ -1,0 +1,207 @@
+
+    <!-- Background -->
+    <div class="bg-img position-relative">
+        <img src="../../../assets/images/home/contact-us/software-bg.jpg" class="w-100" alt="About Us">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white d-flex flex-column align-items-center">
+            <h1 class=" mb-4 about-header">
+                <strong>
+                  {{"contact-us.contact.header1"|translate}}
+                </strong>
+            </h1>
+            
+            <h6 class=" text-center text-light about-paragraph"> 
+              {{"contact-us.contact.header2"|translate}}
+            </h6>
+        </div>
+          <!-- wave -->
+          <app-waves-shape></app-waves-shape>
+    </div> 
+
+    <div class="container w-75 mt-custome" id="Contact-us" > 
+        <div class="row">
+            <!-- Left Column: Form -->
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <p class="mb-4 text-blue fs-5 text-center mt-5 fw-bold">{{"contact-us.formHeader"|translate}}</p>
+                <p class="mb-4 text-blue fs-custome text-center fw-semibold">{{"contact-us.formP"|translate}}</p>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="w-75 mt-4"> 
+
+                  <!-- name -->
+                    <div class="mb-3"> 
+                      <input 
+                        type="text"
+                        class="form-control"
+                        id="name" 
+                        formControlName="name"
+                        [placeholder]="'contact-us.form-name' | translate"
+                        required
+                          >
+                    </div>
+
+                    <!-- email -->
+                    <div class="mb-3">
+                        <input
+                         type="email" 
+                         class="form-control" 
+                         id="email" 
+                         [placeholder]="'contact-us.form-email' | translate" 
+                         formControlName="email"
+                         required
+                         >
+                    </div>
+                     <!-- phone -->
+                    <div class="mb-3">
+                        <input
+                         type="number" 
+                         class="form-control" 
+                         id="phone" 
+                         [placeholder]="'رقم الهاتف' | translate" 
+                         formControlName="phone"
+                         required
+                         >
+                    </div>
+
+                    <!-- company -->
+                    <div class="mb-3"> 
+                      <input 
+                      type="text" 
+                      class="form-control" 
+                      id="company"
+                      [placeholder]="'contact-us.form-company' | translate"
+                      formControlName="company"
+                      required>
+                    </div>
+
+                    <!-- message -->
+                    <div class="mb-3">
+                        <textarea 
+                        class="form-control" 
+                        id="message" 
+                        rows="4" 
+                        [placeholder]="'contact-us.form-message' | translate" 
+                        formControlName="message"
+                        required
+                        >
+                        </textarea>
+                    </div>
+                    <div class="text-center"> 
+                        <button type="submit" class="btn button1">{{"contact-us.send-message"|translate}}</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="col-md-6 image-column d-flex justify-content-center align-items-center contact-img">
+                <img src="../../../assets/images/home/contact-us/contact-creative.jpg" alt="Contact Image" class="img-fluid">
+            </div>
+        </div>
+    </div> 
+    <app-give-us-call></app-give-us-call>
+
+    <!-- map -->
+    <div class=" position-relative map-section">
+        <div class="row">
+            <div class="col-12">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d440400.63540751714!2d31.5118093!3d30.4182389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583d5f989cf553%3A0x3b85d5a368a54f58!2z2YrZiNis2YrYqtmDIC0gVUdFVElDICjYp9mE2YLYp9mH2LHYqSk!5e0!3m2!1sar!2seg!4v1745404317837!5m2!1sar!2seg" 
+              width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+        </div>
+        
+   <!-- Overlapping Card -->
+<div class="card map-card position-absolute p-4">
+  <div class="card-body">
+    <div class="d-flex gap-3 mb-4">
+      <button 
+  class="custom-outline-btn" 
+  [class.active]="selectedBranch === 'cairo'" 
+  (click)="selectedBranch = 'cairo'">فرع القاهرة</button>
+
+<button 
+  class="custom-outline-btn" 
+  [class.active]="selectedBranch === 'kafr'" 
+  (click)="selectedBranch = 'kafr'">فرع كفر الشيخ</button>
+
+    </div>
+  
+    <!-- فرع القاهرة -->
+    <div *ngIf="selectedBranch === 'cairo'">
+      <div class="row mb-3">
+        <div class="col-2">
+          <i class="fa-solid fa-location-dot" style="color: #d3a00f;"></i>
+        </div>
+        <div class="col-10">
+          <h6 class="card-title text-blue mb-2">
+            العنوان: شارع السلاب متفرع من طريق الميثاق، محافظة القاهرة‬ 3753450
+          </h6>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-2">
+          <i class="fa-solid fa-phone" style="color: #d3a00f;"></i>
+        </div>
+        <div class="col-10">
+          <h6 class="card-title text-blue mb-2">الهاتف: 010 11115145</h6>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-2">
+          <i class="fa-solid fa-map-location-dot" style="color: #d3a00f;"></i>
+        </div>
+        <div class="col-10">
+          <h6 class="card-title text-blue mb-2">location</h6>
+          <p class="card-text text-secondary fw-semibold mb-1">
+            <a href="https://maps.app.goo.gl/LbLbMYENs1vF6Vtu8" target="_blank">
+              https://maps.app.goo.gl/LbLbMYENs1vF6Vtu8
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- فرع كفر الشيخ -->
+    <div *ngIf="selectedBranch === 'kafr'">
+      <div class="row mb-3">
+        <div class="col-2">
+          <i class="fa-solid fa-location-dot" style="color: #d3a00f;"></i>
+        </div>
+        <div class="col-10">
+          <h6 class="card-title text-blue mb-2">
+            العنوان: شارع الجيش، قسم كفر الشيخ، قسم اول مدينة كفر الشيخ، محافظة كفر الشيخ 33735
+          </h6>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-2">
+          <i class="fa-solid fa-phone" style="color: #d3a00f;"></i>
+        </div>
+        <div class="col-10">
+          <h6 class="card-title text-blue mb-2">الهاتف: 010 11115145</h6>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-2">
+          <i class="fa-solid fa-map-location-dot" style="color: #d3a00f;"></i>
+        </div>
+        <div class="col-10">
+          <h6 class="card-title text-blue mb-2">location</h6>
+          <p class="card-text text-secondary fw-semibold mb-1">
+            <a href="https://maps.app.goo.gl/v4S54n5KM3YUFfH17" target="_blank">
+              https://maps.app.goo.gl/v4S54n5KM3YUFfH17
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+      </div>
+      
+      <app-pop-up-offers></app-pop-up-offers>
+
+    <app-footer></app-footer>
+

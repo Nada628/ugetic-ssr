@@ -1,0 +1,129 @@
+#pop-up {
+  position: fixed;
+  /* top: 0; */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("../../../../assets/images/home/blogs/pop-up-bg.jpg"); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  font-family: 'bahij';
+  z-index: 9999;
+  /* height: 100%;  */
+   overflow-y: auto;
+
+}
+
+.access-form-container {
+    background-color: transparent;      
+    max-width: 400px;           
+    margin: 50px auto;         
+    padding: 20px;
+    border-radius: 8px;         
+  }
+  
+ 
+  .access-form {
+    display: flex;
+    flex-direction: column;
+    width: 115%;
+  }
+  
+  .access-form .form-control {
+   
+    margin-bottom: 15px;   
+    border: 1px solid #ccc;
+    border-radius: 4px;     
+    font-size: 14px;
+    outline: none;          
+    transition: border-color 0.2s ease;
+  }
+  
+  
+  .access-form .btn-submit {
+    background-color: #d3a00f;   
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+  }
+  
+ 
+
+
+  .countdown-container {
+    /* background: url('assets/images/countdown-bg.jpg') no-repeat center center; */
+    /* background-size: cover; */
+    padding: 20px;
+  }
+  
+  .countdown-box {
+    width: 70px;         
+    border-radius: 8px;  
+    text-align: center;
+    /* background-color: #143055; */
+  }
+
+  /* close btn */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+  /* end of close btn */
+  
+
+@media (max-width: 500px) {
+  #pop-up {
+    width: 100%;
+    background-image: url("../../../../assets/images/home/blogs/pop-up-bg.jpg"); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    font-family: 'bahij';
+    top: 0px !important;
+    height: 100% !important;
+  }
+
+  .close-btn {
+    bottom: 0px !important;
+  }
+}
+
+
+
+/* .close-btn {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+} */
+#pop-up {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

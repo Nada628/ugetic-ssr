@@ -1,0 +1,76 @@
+.bg-img {
+    background-color: #777af212 ; 
+    height: 500px; 
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(../../../assets/images/home/faq/dots-shape.png);
+    background-size: auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.text-paragraph{
+  font-size: 18px ;
+  line-height: 2rem ;
+  text-align:center;
+}
+
+.blog-content {
+    padding: 20px;
+  }
+  
+  .fixed-right {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+  }
+  
+  @media (max-width: 768px) {
+    .fixed-right {
+      position: static;
+    }
+  }
+
+
+   @media (max-width: 500px) {
+   .text-header{
+        font-weight: 600px;
+        letter-spacing: -0.32px;
+        line-height:34px !important;
+        font-size: 18px !important;
+        margin-top: 14rem;
+    
+    }
+    .text-paragraph{
+     font-size: 0.875rem !important ;
+     line-height: 25px !important;
+     text-align:center !important;
+     width: 174% !important;
+    
+     /* letter-spacing:  0.09rem; */
+    
+    }
+  }
+.mt-7{
+    margin-top: 7rem;
+}
+.ms-7{
+    margin-left: 5rem;
+}
+.blog-img img{
+    border-radius: 5px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+ a{
+    text-decoration: none;
+  }
+ p , span, h1, h6{
+    font-family: 'bahij';
+  }

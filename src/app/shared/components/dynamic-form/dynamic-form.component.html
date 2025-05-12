@@ -1,0 +1,91 @@
+<section>
+    
+    <div class="position-relative">
+        <!-- part 1 -->
+        <div class="bg-img position-relative" id="dynamic-form">
+           
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mt-5">
+                        <h2 class=" mb-4 text-blue mt-5">
+                            لا تفوت فرصتك! وكن جزءً من مجتمعنا
+   
+                       </h2>
+                       <p class="text-blue mt-2">
+                           نحن هنا لمساعدتك والإجابة عن جميع استفساراتك. إذا كان لديك أي أسئلة أو تحتاج إلى دعم، لا تتردد في التواصل معنا.
+                       </p>
+                    </div>
+                  
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 d-flex flex-column align-items-center">
+                        <div class="form-part text-center">
+                            <p class="mb-4 text-blue fs-5 text-center mt-5 fw-bold">{{"contact-us.formHeader"|translate}}</p>
+                            <p class="mb-4 text-blue fs-custome text-center fw-semibold">{{"contact-us.formP"|translate}}</p>
+                            <form  class="w-75 mt-4 mx-auto"> 
+            
+                              <!-- name -->
+                                <div class="mb-3"> 
+                                  <input 
+                                    type="text"
+                                    class="form-control input-bg"
+                                    id="name" 
+                                    [placeholder]="'contact-us.form-name' | translate"
+                                    required
+                                      >
+                                </div>
+            
+                                <!-- email -->
+                                <div class="mb-3">
+                                    <input
+                                     type="email" 
+                                     class="form-control input-bg" 
+                                     id="email" 
+                                     [placeholder]="'contact-us.form-email' | translate" 
+                                     required
+                                     >
+                                </div>
+            
+                                <!-- company -->
+                                <div class="mb-3"> 
+                                  <input 
+                                  type="text" 
+                                  class="form-control input-bg" 
+                                  id="company"
+                                  [placeholder]="'contact-us.form-company' | translate"
+                                  required>
+                                </div>
+            
+                                <!-- message -->
+                                <div class="mb-3">
+                                    <textarea 
+                                    class="form-control input-bg" 
+                                    id="message" 
+                                    rows="4" 
+                                    [placeholder]="'contact-us.form-message' | translate" 
+                                    required
+                                    >
+                                    </textarea>
+                                </div>
+                                <div class="text-center"> 
+                                    <button type="submit" class="btn button1">{{"contact-us.send-message"|translate}}</button>
+                                </div>
+                            </form>
+                        </div>
+                       
+                    </div>
+        
+                    <!-- Right Column: Image -->
+                    <div class="col-md-6 image-column d-flex justify-content-center align-items-center">
+                        <img src="../../../../assets/images/home/contact-us/dynamic-form-img.png" alt="Contact Image" >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+ </section>

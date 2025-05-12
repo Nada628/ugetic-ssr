@@ -1,0 +1,48 @@
+
+.left-text p{
+    font-size: 2rem;
+    font-family: 'bahij';
+    color: #132f55;
+}
+.right-text p{
+    font-size: large;
+    color: #132f55;
+    font-family: 'bahij';
+
+}
+.card {
+    width: 170px;
+    height: 170px; 
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-caption {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #132f55;
+    width: 75%;
+    font-family: 'bahij';
+}
+.icon i{
+    color: #132f55;
+}
+
+#unique {
+    background-image: url('../../../assets/images/home/circle-bg.png'); 
+    background-size: cover;  
+    background-size: 100% auto; 
+  
+    padding-top: 50px;
+    padding-bottom: 50px;  background-position: center center; 
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+  }
+  
+@media(max-width:576px){
+    
+}
+
+
+  

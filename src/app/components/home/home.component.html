@@ -1,0 +1,47 @@
+<app-navigation-bar></app-navigation-bar>
+
+<app-header
+ class="mb-5" 
+ [headerKey]="dynamicSectionData.headerKey"
+    [rotatingTextKeys]="dynamicSectionData.rotatingTextKeys"
+    [staticTextKey]="dynamicSectionData.staticTextKey"
+    [watchButtonKey]="dynamicSectionData.watchButtonKey"
+    [downloadButtonKey]="dynamicSectionData.downloadButtonKey"
+    [imageUrl]="dynamicSectionData.imageUrl"
+ >
+</app-header>
+<!-- <app-side-bar></app-side-bar> -->
+<app-trusted-by class="mt-5"></app-trusted-by>
+<app-feature-one id="features"></app-feature-one>
+
+<app-featureTwoThree id="apps"  [featureTwoHeaderKey]="featureTwoData.headerKey"
+[featureTwoDescKey]="featureTwoData.descKey"
+[featureTwoItems]="featureTwoData.items"
+[featureTwoImageUrl]="featureTwoData.imageUrl"
+
+[featureThreeHeaderKey]="featureThreeData.headerKey"
+[featureThreeDescKey]="featureThreeData.descKey"
+[featureThreeItems]="featureThreeData.items"
+[featureThreeImageUrl]="featureThreeData.imageUrl">
+</app-featureTwoThree>
+
+<app-tabs [tabs]="tabsData"
+          [tabsMetadata]="tabsMetadata"
+          parentComponent="HomeComponent">
+</app-tabs>
+
+<!-- <app-pop-up-offers></app-pop-up-offers> -->
+<app-reviews  id="reviews"></app-reviews>
+
+<app-home-call-to-action 
+[title]="'ابدأ الآن مع برنامج إدارة المكاتب الهندسية وحوّل مكتبك الهندسي إلى قمة الاحترافية!'"
+[button]="'إنشاء حساب مجاني'"
+>
+
+</app-home-call-to-action>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer id="contact"></app-footer>
+
+

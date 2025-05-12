@@ -1,0 +1,48 @@
+<div class="row  bg-img " >
+    <!-- Text Section -->
+    <div class="col-sm-11 col-md-10 col-lg-5 mt-lg-7">
+        <div class="container mt-lg-5 ms-lg-5">
+            <div class="dynamic-text">
+                <p class="font-bold mt-5 fw-bold text-white header ms-lg-5-5">
+                   {{ headerKey | translate }}
+                </p>
+                <div class="rotating-text">
+                    <p *ngFor="let textKey of rotatingTextKeys" class="font-bold text-white ms-lg-5-5">
+                        {{ textKey | translate }}.
+                    </p>
+                </div>
+            </div>
+          
+            <!-- Static Text -->
+            <div class="static-text container">
+                <p class="text-white ms-lg-6 fw-semibold ">
+                    {{ staticTextKey | translate }}
+                </p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons mt-3">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-10 me-custome">
+                        <button class="button1 mb-3"(click)="onDownloadClick()">
+                            {{ watchButtonKey | translate }}
+                            <!-- <i class="fa-solid fa-chevron-left  me-2"></i> -->
+                        </button>
+                    </div>
+                    <div class="col-lg-4 col-sm-10 m-negative">
+                        <button class="button2">
+                            {{ downloadButtonKey | translate }}
+                            <i class="fa-solid fa-chevron-left  me-2"></i>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Image Section -->
+    <div class="col-lg-7 col-sm-11 app mt-7">
+        <img class="mt-7 img-fluid " [src]="imageUrl" alt="Dynamic Section Image" loading="lazy">
+    </div>
+</div>

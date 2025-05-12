@@ -1,0 +1,71 @@
+
+
+.header p{
+  font-size: 1.5rem;
+  color: #21416f;
+  font-family: "bahij";
+
+}
+.header{
+  font-family: 'bahij';
+}
+.middle p{
+  font-size: 18px;
+  font-family: "bahij";
+  color: #21416f;
+
+}
+.right-text span{
+  font-size: 18px;
+  font-family: "bahij";
+
+
+}
+.item-text{
+  font-family: "bahij";
+
+}
+.fature2 img{
+  width: 100%;
+  margin-right: -4rem;
+}
+
+.m-s{
+  margin-left: 3rem ;
+}
+@media (max-width: 992px) { 
+  .fature3 img{
+  width: 100%;
+
+}
+}
+@media (max-width: 500px) { 
+  .fature2 img{
+    margin-right: 0 !important;
+  }
+  .responsive-icon{
+    width: 12% !important;
+  }
+  .icons-text .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.m-s{
+margin-left: 0 !important;
+}
+
+.icons-text img {
+  margin-bottom: 2rem;
+  margin-left: 12rem;
+  margin-top: 2rem;
+
+}
+
+.icons-text span {
+    margin-top: 0 !important;
+    margin-left: 5rem !important;
+}
+}
+.responsive-icon{
+  width: 7%;
+}

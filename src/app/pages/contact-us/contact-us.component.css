@@ -1,0 +1,156 @@
+.bg-img{
+    font-family: 'bahij';
+}
+.image-column img {
+    border-radius: 0 15px 15px 0; 
+    width: 100%; 
+    height: auto;
+}
+.mt-custome{
+    margin-top: -280px;
+}
+#Contact-us {
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    background-color: #fff; 
+    position: relative; 
+    font-family: 'bahij';
+}
+
+.button1 {
+    background: white;
+    border: 1px solid #d3a00f;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #d3a00f;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'bahij';
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.button1:hover,
+.button1:active {
+    background-color: #d3a00f;
+    background-position: 0 0;
+    color: white;
+}
+
+.button1:active {
+    opacity: .5;
+}
+.map-section {
+    position: relative;
+  }
+  
+  .map-card {
+    top: 150px; 
+    right: 40px; 
+    width: 380px; 
+    height: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    padding: 20px; 
+  }
+  
+  .fs-custome{
+    font-size: 0.9rem;
+  }
+.contact-img img{
+   
+    border-radius: 5px; 
+}
+
+.about-header{
+    font-weight: 600px;
+    letter-spacing: -0.52px;
+    line-height:4.25rem;
+
+}
+
+.about-paragraph{
+    font-size: 20px ;
+    line-height: 2rem ;
+    font-weight: 600;
+    text-align:center;
+    /* width: 70%; */
+   
+    /* letter-spacing:  0.09rem; */
+   
+   }
+  @media(max-width:600px){
+    .mt-custome{
+        margin-top: 2rem;
+    }
+    .image-column img{
+        display: none;
+    }
+    .contact-img img{
+       margin-top: 1rem !important;
+    }
+    
+    .about-header{
+        font-weight: 600px;
+        line-height:30px !important;
+        font-size: 18px !important;
+        margin-top: 12rem;
+    
+    }
+    .about-paragraph{
+        font-size: 0.875rem !important ;
+        line-height: 32px !important;
+        text-align:center !important;
+        /* width: 167% !important; */
+       
+        /* letter-spacing:  0.09rem; */
+       
+       }
+    .bg-img img{
+        width: 800px;
+        height: 500px; 
+        object-fit: cover;
+    }
+    .map-card {
+        top: 150px; 
+        right: 40px; 
+        width: 277px; 
+        height: 395px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+        border-radius: 10px;
+        padding: 20px; 
+      }
+  }
+  .custom-outline-btn {
+    border: 2px solid #d3a00f;
+    background-color: transparent;
+    color: #d3a00f;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  
+  }
+  
+  .custom-outline-btn:hover,
+  .custom-outline-btn:focus,
+  .custom-outline-btn:active,
+  .custom-outline-btn.active {
+    background-color: #d3a00f;
+    color: #fff;
+    border-color: #d3a00f;
+  }
+  

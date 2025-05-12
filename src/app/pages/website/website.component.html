@@ -1,0 +1,106 @@
+<app-navigation-bar></app-navigation-bar>
+
+<app-header
+ class="mb-5" 
+ [headerKey]="dynamicSectionData.headerKey"
+    [rotatingTextKeys]="dynamicSectionData.rotatingTextKeys"
+    [staticTextKey]="dynamicSectionData.staticTextKey"
+    [watchButtonKey]="dynamicSectionData.watchButtonKey"
+    [downloadButtonKey]="dynamicSectionData.downloadButtonKey"
+    [imageUrl]="dynamicSectionData.imageUrl"
+ >
+</app-header>
+
+<!-- <app-side-bar></app-side-bar> -->
+<app-trusted-by class="mt-5"></app-trusted-by>
+
+<app-eom-feature1 
+  id="features"
+  [headerTextKey]="'عزز تواجدك الرقمي بين المنافسين وزد حصيلة عملائك'"
+  [paragraphTextKey]="'نساعدك في تصميم موقعا الكترونيا يعزز الهوية البصرية لعلامتك التجارية، يحجز  لك مكانا بين منافسيك الكترونيا، مع مزيد من العملاء المحتملين، بجانب مميزات أخرى كثيرة. '"
+  [cards]="featureCards"
+></app-eom-feature1>
+
+<app-featureTwoThree id="apps"  [featureTwoHeaderKey]="featureTwoData.headerKey"
+[featureTwoDescKey]="featureTwoData.descKey"
+[featureTwoItems]="featureTwoData.items"
+[featureTwoImageUrl]="featureTwoData.imageUrl"
+
+[featureThreeHeaderKey]="featureThreeData.headerKey"
+[featureThreeDescKey]="featureThreeData.descKey"
+[featureThreeItems]="featureThreeData.items"
+[featureThreeImageUrl]="featureThreeData.imageUrl">
+</app-featureTwoThree>
+
+<app-tabs [tabs]="tabsData"
+          [tabsMetadata]="tabsMetadata"
+          parentComponent="AppsComponent">
+</app-tabs>
+<app-dynamic-services-card
+
+  [title]="'خواص يسهل التعامل معها'"
+  [desc1]="'لا تتردد في تصميم موقع إلكتروني لشركتك، فمكاسب التي ستحصل عليها منه أكثر وأقوى من أشياء أخرى كثيرة، ومع يوجيتك يمكنك تصميم موقعا يعبر عن علامتك التجارية، ويجعلك في مقدمة المنافسين'"
+  [desc2]="''"
+  
+  [card1Title]="'نوفر لك دعم فني سنوي'"
+  [card1Desc1]="' من أجل ضمان أمان واستقرار موقعك.'"
+
+  [card2Title]="'بروتوكول SSL'"
+  [card2Desc1]="'لضمان سرية البيانات والمعلومات'"
+ 
+
+  [card3Title]="'تحليل بيانات عملائك'"
+  [card3Desc1]="'من خلال ربط موقعك بأدوات تحليل البيانات مثل CLARITY  وgoogle analytics'"
+
+></app-dynamic-services-card>
+<!-- <app-pop-up-offers></app-pop-up-offers> -->
+<app-reviews  id="reviews"></app-reviews>
+
+<app-block-faq
+  [title]="'الأسئلة الشائعة '"
+  [faqs]="[
+    { question: 'ما هو تصميم الموقع؟', 
+     answer: 'تصميم موقع  إلكتروني يعني العملية الخاصة بتهيئة وتصميم وتطوير واجهة المستخدم في الموقع من جميع الزوايا مثل الرسوم والصور والنصوص والخطوط والأيقونات والأزرار التفاعلية والأشكال والألوان، لتوفير واجهة استخدام تفاعلية للمستخدم تتيح له تجربة مثالية للتعامل مع الموقع بسهولة وفعالية تحقق غرض إنشاء الموقع.' },
+    
+     { question: 'هل هناك فرق بين تصميم المواقع وبرمجة المواقع؟',
+      answer: 'نعم بالتأكيد تختلف برمجة الموقع عن التصميم، فالتصميم هو الصورة النهائية التي تجذب المستخدم أما البرمجة فهي التي تتيح عمل الموقع، والإثنين وجهان لعملة واحدة فبدون التصميم يفقد الموقع جاذبيته،وبدون البرمجة يفقد الموقع قدرته على العمل بكفاءة، حيث يوفر التصميم الصورة الجذابة والألوان والخطوط وتتيح البرمجة قابلية هذه العناصر للتفاعل من خلال الأزرار والأوامر.' },
+    
+    { question: 'هل هناك شركات متخصصة في تصميم المواقع؟',
+      answer: 'نعم بالتأكيد، يوجيتك من أفضل شركات تصميم المواقع في مصر، حيث تقدم مجموعة من الخدمات التقنية المتكاملة تلبي إحتياجات العملاء وتعزز من التواجد الرقمي من خلال تصميم مواقع إحترافية وتقديم حلول تقنية مبتكرة.' },
+
+      {question:'هل هناك فرق بين تطوير الموقع وتصميم الموقع؟',
+      answer:'الكثير من الأشخاص يحدث لديهم خلط بين عملية تصميم الموقع وتطويره ويعتقدون أنها عملية واحدة ولكن هناك فرق بين الإثنين  فعملية تصميم الموقع تختص بالمظهر الخارجي للموقع وكيفية تنظيمه ورؤية المستخدم له، أما تطوير الموقع فيختص بكيفية العمل وبرمجيات الموقع التي تتيح عمل التصميم بصورة صحيحة.'},
+ 
+      {
+        question:'كم من الوقت يستغرق تصميم المواقع الإلكترونية؟',
+        answer:'تختلف المدة اللازمة لتصميم المواقع حسب حجم الموقع ودرجة التعقيد، فهناك موقع بسيط قد يحتاج من أسبوعين – شهر، أما المواقع المعقدة والكبيرة والتي تتطلب مزايا مخصصة قد يستغرق تصميمها أشهر، فالأهم من الوقت اللازم للتصميم هو القدرة على تحقيق المعادلة الصعبة في الجمع بين الدقة وجودة التصميم خلال الوقت المناسب. '
+      },
+      {
+        question:'هل يمكن لأي شخص إدارة الموقع بعد انتهاء التصميم؟',
+        answer:'نعم يمكنك التحكم وإدارة الموقع الخاص بك لاحقًا خاصًة إذا كنت تمتلك  نظام لإدارة المحتوى عبر Wordpress  و Shopify، يتيح لك إضافة وتعديل المحتوى وصفحات الموقع وفقًا لخطة العمل، وهذا لايتطلب خبرة ولكن يحتاج إلى تدريب على نظام عمل الموقع خلال التصميم.'
+      },
+      {
+        question:'هل من الممكن تحديث تصميم الموقع في وقت لاحق؟ ',
+        answer:'بالتأكيد نعم من الممكن تحديث تصميم المواقع لاحقًا حتى تناسب التطورات والتحديثات التقنية وتلبي احتياجات العملاء، فعملية التحديث الدورية تحافظ على حيوية وتجدد المواقع وتضمن للمستخدم تجربة استخدام متجددة.'
+
+      },
+      {
+        question:'ما هو الموقع المستجيب وهل يختلف عن الموقع التفاعلي؟ ',
+        answer:'الموقع المستجيب هو الموقع الذي تم تصميمه بصورة تسمح بالتكيف التلقائي مع حجم شاشة الجهاز سواء كان كمبيوتر، تابلت، موبايل من خلال تقنيات مخصصة لتوفير تجربة استخدام أفضل، أما الموقع التفاعلي فهو الذي يتيح إمكانية التفاعل مع المستخدم من خلال تقنيات متخصصة مثل JavaScript.'
+      }
+ ]"
+
+  imageSrc="../../../assets/images/home/faq/faq.jpg"
+></app-block-faq>
+
+<app-home-call-to-action 
+[title]="'هل أنت جاهز للتميز؟ دعنا نصمم لك موقعًا فريدًا!'"
+[button]="'تواصل معنا'"
+>
+</app-home-call-to-action>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer id="contact"></app-footer>
+
+

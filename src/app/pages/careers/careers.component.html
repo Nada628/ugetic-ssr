@@ -1,0 +1,151 @@
+<app-navbar></app-navbar>
+<!-- part 1 -->
+<div class="container-fluid careers" style="background-color: #e5e8f5; height: 90vh; width: 95%; display: flex; justify-content: normal; align-items: center;">
+    <div class="row w-100 mt-5 "> 
+        <div class="col-5" style="margin-top: 5rem;">
+          <h1 class="text-blue career-heading me-5">
+            هل تبحث عن <span style="color: #d3a00f;">وظيفة</span> جديدة؟
+          </h1>
+                      <div class=" me-custome ">
+                <button class="button1 mb-3 ">
+                    شاهد الوظائف المتاحة
+                </button>
+
+                <div class="arrow-button mt-5">
+                    <i class="bi bi-arrow-down-circle fs-3 text-blue  " 
+                     style=" cursor: pointer;"
+                     (click)="scrollTo()"
+                     ></i>
+
+            </div>
+            </div>
+        </div>
+        <div class="col-6 dots-shape" style="margin-top: 5rem;" >
+          
+            <div class="row ">
+                <div class="col-lg-6 col-md-10 col-sm-11 mb-4">
+                    <div class="cardy border-0 shadow-sm">
+                        <img src="../../../assets/images/home/about-us/Startup4.jpg" class="cardy-img-top rounded ms-5 w-100" alt="Image 1">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-10 col-sm-11 mb-4">
+                    <div class="cardy border-0 shadow-sm">
+                        <img src="../../../assets/images/home/about-us/Startup5.jpg" class="cardy-img-top rounded img-overlap w-100" alt="Image 2">
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
+<!-- part2 -->
+ <section class="mt-5">
+    <div class="container">
+        <div class="row">
+          <div class="col-8">
+              <h2 class="text-blue">
+                <strong>
+                    ما هي المزايا؟
+                </strong>
+            </h2>
+            <p class=" mt-4" style="line-height:2em; font-size: 17px;">نحن وكالة تجارة إلكترونية تضع العميل في المقام الأول، ونجمع بين أفضل تصميمات تجربة المستخدم والتكنولوجيا والتحليلات لإنشاء مواقع يحبها المتسوقون وتكتيكات الاحتفاظ التي تجعلهم يعودون مرة أخرى
+                
+            </p>
+          </div>
+          <div class="col-4">
+            <button class="button1 mb-3 me-13 w-50">
+              انضم إلينا  
+            </button>
+          </div>
+        </div>
+
+    </div>
+ </section>
+
+ <!-- part 3 cards -->
+  <section class="my-5">
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4 mb-4" *ngFor="let card of cards">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="row my-5">
+                <div class="col-2">
+                  <i [class]="card.icon" style="font-size: 2rem; color: #d3a00f;"></i>
+                </div>
+                  <div class="col-10"> 
+                    <h5 class="card-title text-blue">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.content }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr class="  mx-auto" style="width: 86%;">
+  </section>
+
+  <!-- part4 openinig positions -->
+
+  <section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-blue text-center"> الوظائف المفتوحة</h2>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-4" *ngFor="let job of jobs">
+              <div class="card job-card">
+                <div class="card-body my-5 me-5">
+                  <div class=" mb-3">
+                    <i class="bi bi-briefcase icon-large"></i>
+                  </div>
+          
+                  <h4 class="card-title job-title text-blue mt-3">
+                    <strong>
+
+                        {{ job.title }}
+                    </strong>
+                </h4>
+          
+                  <p class="card-text job-description mt-3 text-muted">
+                    {{ job.description }}
+                  </p>
+
+          
+                  <div class="job-details mt-4">
+                    <div class="detail-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <span>Location: {{ job.location }}</span>
+                    </div>
+                    <div class="detail-item">
+                      <i class="bi bi-briefcase"></i>
+                      <span>Job type: {{ job.type }}</span>
+                    </div>
+                    <div class="detail-item">
+                      <i class="bi bi-cash"></i>
+                      <span>Salary: {{ job.salary }}</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-5">
+                    <p >
+                        <a class="text-muted" [routerLink]="['/apply-jop']">Apply now</a>
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              
+        </div>
+
+
+  </section>
+
+  <!-- part5 join us -->
+<app-join-us-block></app-join-us-block>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer></app-footer>

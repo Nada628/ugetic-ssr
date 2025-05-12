@@ -1,0 +1,67 @@
+.main-container {
+    background-image: url(../../../assets/images/home/circle-bg.png);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+}
+
+    /* Trusted clients */
+    .trusted-by {
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.slick-slide{
+    margin: 0 20px;
+}
+.slick-slide img{
+    width: 30%;
+}
+
+
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+.slick-slide{
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+@media (max-width: 576px) { 
+    .slick-slide img{
+        width: 50%;
+    }
+  }
+
+  @media (max-width: 992px) { 
+    .slick-slide img{
+        width: 60%;
+    }
+  }
+img{
+    height: auto;
+}
+
+
+  

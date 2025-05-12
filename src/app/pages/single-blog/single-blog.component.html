@@ -1,0 +1,163 @@
+<app-navbar></app-navbar>
+<div class="container-fluid position-relative">
+    <!-- part 1 -->
+     <div class="bg-img position-relative">
+        <img src="../../../assets//images//home/about-us-creative.jpg" class="w-100" alt="About Us">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white d-flex flex-column align-items-center">
+            <p class="fs-1 fw-bold mb-4">{{blog.title}} </p>
+            <div class="icon-line  mb-3">
+                <span class="icon-wrapper">
+                    <i class="fa-regular fa-clock" style="color: white;"></i>
+                    <span class="icon-text ms-2">July 29, 2020</span>
+                </span>
+                <span class="icon-wrapper">
+                    <i class="fa-solid fa-pen ms-3" style="color: white;"></i>
+                    <span class="icon-text ms-2">Sway</span>
+                </span>
+                <span class="icon-wrapper">
+                    <i class="fa-regular fa-comment ms-2" style="color: white;"></i>
+                    <span class="icon-text ms-2">3</span>
+                </span>
+            </div>          
+             </div> 
+             <app-waves-shape></app-waves-shape>
+
+    </div>
+
+    
+      <!-- blog -->
+       <div class="container ">
+        <div class="row mt-7">
+            <!-- Left side: Blog content -->
+            <div class="col-md-7 col-11 ms-3 blog-content ">
+                <div class="blog-img">
+                    <img src="../../../assets/images/home/blogs/single.jpg" class="w-100">
+                </div>
+                <!-- desc -->
+              <div class="intro">
+                <p class="text-muted fs-6 mt-5 fw-semibold">
+                   {{blog.description}}
+                </p>
+                <div class="title1" id="heading1">
+                  <p class="fw-bold text-blue fs-4 fs-4" >
+                        content
+
+                    </p>
+                    <p class="text-muted fs-6 fw-semibold ">
+                       {{blog.content}}
+                    </p>
+                    
+                    
+                </div>
+              </div>
+              
+           
+
+
+            </div>
+        
+            <!-- Right side:  -->
+
+            <!-- <div class="col-md-4 d-none d-md-block">
+              <div class="card fixed-right mt-3">
+                <img src="../../../assets/images/home/blogs/side-bar.jpg" class="img-fluid">
+              </div>
+            </div> -->
+        
+          </div>
+          <hr>
+
+          <!-- comments -->
+           <div class="row mt-5">
+            <!-- left side -->
+            <div class="col-md-7 col-11 ms-3">
+                    <h2 class="fw-bold text-blue ">التعليقات</h2>
+                    <div class="mt-3 ">
+                        <div *ngIf="comments.length > 0; else noResults">
+                          <div *ngFor="let comment of comments" class="row mb-3">
+                            
+                            <div class="card mb-3 " >
+                                <div class="row g-0">
+                                  <div class="col-md-1  mt-4">
+                                    <i class="bi bi-person-circle  fs-1"></i>
+                                  </div>
+                                  <div class="col-md-11">
+                                    <div class="card-body">
+                                      <h5 >{{comment.user_name}} </h5>
+                                      <p class="card-text">{{comment.date}}</p>
+                                      <p class="card-text">
+                                        {{comment.content}}
+                                    </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      
+                        <ng-template #noResults>
+                          <p class="text-center">  لا يوجد تعليقات</p>
+                        </ng-template>
+                      </div>
+
+                      <div class="mt-5">
+                        <div class="row">
+                            <h4 class="text-blue">  إضافة تعليق</h4>
+                        </div>
+                        <form [formGroup]="commentForm" (ngSubmit)="addComment(id)">
+                            <label for="content" class="mt-3">التعليق</label>
+                            <textarea 
+                            id="content" 
+                            formControlName="content"
+                             rows="3" 
+                             class="form-control  mt-1"
+                            placeholder="Enter your comment">
+                        </textarea>
+                          
+                            <div *ngIf="commentForm.get('content')?.touched && commentForm.get('content')?.invalid" class="text-danger">
+                              التعليق مطلوب
+                             </div>
+                          
+                            <button type="submit" class="button1 my-3" [disabled]="commentForm.invalid">إرسال </button>
+                          </form>
+                          
+
+                        <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+                        <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+                      </div>
+                
+            </div>
+
+            <!-- right side -->
+             <div class="col-md-4 col-11  ">
+              <div class="  mt-3">
+                <div class=" p-3 m-3 mb-3 card">
+                  <h5 class="fw-bold my-3 text-blue">مقالات ذات صلة</h5>
+                  <ul class="list-unstyled">
+                      <li *ngFor="let blog of blogs" class="d-flex align-items-center mb-2 recent-blogs">
+                          <img src="../../../assets/images/home/blogs/page_blog_small.jpg"  class="blog-image ms-2">
+                          <a [routerLink]="['/single-blog', blog.id]" class="blog-link me-3">
+                            {{ blog.title }}
+                          </a>
+                          
+                      </li>
+                  </ul>
+                </div>
+
+                <img src="../../../assets/images/home/blogs/side-bar.jpg" class="img-fluid mb-5">
+                
+              
+              </div>
+             </div>
+
+
+           </div>
+       </div>
+
+
+</div>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer></app-footer>
+

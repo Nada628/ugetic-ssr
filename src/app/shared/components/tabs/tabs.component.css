@@ -1,0 +1,112 @@
+
+
+*{
+  font-family: 'bahij';
+}
+.card-text{
+  font-size: 0.9rem !important;
+}
+.text-blue{
+  color: #132f55;
+}
+.nav-pills .nav-link.active {
+  background-color: transparent; 
+  color: inherit; 
+  border: none; 
+  box-shadow: 2px 2px 4px rgba(148, 148, 187, 2); 
+}
+.card.active .card-title::before {
+  content: "\2022"; /* Unicode character for bullet point */
+  color: #132f55;
+  font-weight: bold;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+.card.active {
+  border-top: none; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+
+}
+.card:hover {
+  background-color: white !important; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important; 
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  position: relative;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd; /* Default card border */
+  overflow: hidden;
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+
+}
+.card.active .border-anim {
+  animation: slideIn 0.5s forwards;
+}
+.card.deselected .border-anim {
+  animation: slideOut 0.5s forwards;
+}
+.ServicesComponent{
+  background-color: #f5f6fe ;
+  border-radius: 6%;
+  border-color: #f5f6fe;
+}
+/* Animation for border moving from right to left */
+@keyframes slideIn {
+  from {
+    left: 100%;
+    width: 0;
+  }
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
+
+/* Animation for border moving from left to right */
+@keyframes slideOut {
+  from {
+    left: 0;
+    width: 100%;
+  }
+  to {
+    left: 100%;
+    width: 0;
+  }
+}
+.border-anim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #132f55;
+  width: 100%;
+}
+
+
+@media(max-width:992px){
+  .tab-pane img{
+    width: 100% !important;
+    /* margin-left:2rem   !important;  */
+  }
+}
+.home-tab-img {
+  width: 113%;
+  height: auto;
+}
+
+
+.services-tab-img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width:500px) {
+  .ServicesComponent{
+    background-color: #f5f6fe ;
+    border-radius: 30px;
+    border-color: #f5f6fe;
+  }
+}

@@ -1,0 +1,111 @@
+.image-column img {
+    border-radius: 0 15px 15px 0; 
+    width: 100%; 
+    height: auto; 
+}
+*{
+    font-family: 'bahij';
+}
+
+#login{
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    background-color: #fff; 
+    position: relative; 
+    
+}
+.bg-img {
+    background-image: url("../../../assets/images/home/home-bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+.button1 {
+    background: white;
+    border: 1px solid #d3a00f;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #d3a00f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 50%;
+
+}
+
+.button1:hover,
+.button1:active {
+    background-color: #d3a00f;
+    background-position: 0 0;
+    color: #fff;
+}
+
+.button1:active {
+    opacity: .5;
+}
+.input-bg {
+    background-color: #f2f2f2; 
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    padding: 5px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+}
+.right-form {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+.mt-custome{
+    margin-top: 16rem;
+}
+.form-check .form-check-input {
+    float: none !important;
+    margin-left: 0.5em !important;
+}
+.title{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    line-height: 36.4px;
+}
+.paragraph{
+    font-size: 16px;
+    letter-spacing: 0.30px;
+    line-height: 27px;
+    font-weight: 500;
+}
+.nav-pills {
+    --bs-nav-pills-border-radius: var(--bs-border-radius);
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: #d3a00f !important; 
+}
+
+.nav{
+    --bs-nav-link-color: #d3a00f !important;
+    --bs-nav-link-hover-color: #d3a00f !important;
+
+}
+
+
+  

@@ -1,0 +1,35 @@
+<!-- block-faq.component.html -->
+<section class="container my-5">
+  <header class="row mt-6 text-center">
+    <h2 class="text-blue fw-bold fs-2">
+      {{ title | translate }}
+    </h2>
+  </header>
+
+  <div class="row mt-5">
+    <!-- FAQ Content -->
+    <div class="col-lg-6 col-md-10 col-sm-11">
+      <section class="accordion" id="accordionExample" aria-label="FAQ Section">
+        <article class="accordion-item mt-3" *ngFor="let faq of faqs; let i = index">
+          <h3 class="accordion-header" [id]="'heading' + i">
+            <button class="accordion-button text-blue fw-semibold" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="i === 0" [attr.aria-controls]="'collapse' + i">
+              {{ faq.question | translate }}
+            </button>
+          </h3>
+          <div [id]="'collapse' + i" class="accordion-collapse collapse" [class.show]="i === 0" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="text-blue">{{ faq.answer | translate }}</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <!-- FAQ Image -->
+    <aside class="col-lg-6 col-md-10 col-sm-11">
+      <div class="faq-img me-5">
+        <img [ngSrc]="imageSrc" width="800" height="400" class="w-100" loading="lazy" alt="FAQ illustration">
+      </div>
+    </aside>
+  </div>
+</section>

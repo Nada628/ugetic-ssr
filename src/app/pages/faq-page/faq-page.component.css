@@ -1,0 +1,57 @@
+
+#section-faq{
+    border-radius: 15px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    background-color: #fff; 
+    position: relative; 
+    font-family: 'bahij';
+}
+.accordion-item:not(:first-of-type) {
+    border-top: 1px solid #ddd !important;
+}
+.accordion-button::after{
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+.accordion-button:hover {
+    color: #d3a00f !important; 
+  }
+  
+
+.accordion-button:not(.collapsed) {
+    background-color: inherit !important;
+    /* color: inherit !important; */
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+.bg-img{
+    background-image: url(../../../assets/images/home/faq/dots-shape.png);
+    background-size: auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transform: translate3d(0px, 0px, 0px);
+    font-family: 'bahij';
+
+}
+h5, p{
+    font-family: 'bahij';
+
+}
+.custom-card {
+    width: 280px; 
+    height: 300px;
+    transition: transform 0.3s ease; 
+}
+
+.custom-card:hover {
+    transform: scale(1.05); 
+}
+h4{
+    margin-right: 2.75rem !important
+}
+button{
+    text-align: right;
+}

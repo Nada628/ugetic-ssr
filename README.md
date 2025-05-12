@@ -1,1 +1,2 @@
-# ugetic-ssr
+# ugeticFR
+ugetic frontend development

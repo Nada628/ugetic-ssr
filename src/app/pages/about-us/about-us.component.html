@@ -1,0 +1,228 @@
+<app-navbar></app-navbar>
+    <!-- part 1 -->
+    <div class="bg-img position-relative " >
+        <img [ngSrc]="'../../../assets/images/home/about-us-creative.jpg'"  class="w-100" alt="About Us" width="100" height="42" loading="lazy">
+        <div class="position-absolute mt-custome top-50 start-50 translate-middle text-center text-white d-flex flex-column align-items-center p-3">
+            <h1 class=" about-header">
+               <strong>
+                   {{"about.header"|translate}} 
+               </strong>
+
+           </h1>
+            <h6 class=" mt-3 text-center text-light about-paragraph">
+                 {{"about.description"|translate}} 
+            </h6>
+            <div class="arrow-button mt-5">
+                    <i class="bi bi-arrow-down-circle fs-3" 
+                     style="color: white; cursor: pointer;"
+                     (click)="scrollTo()" >
+                   </i>
+            </div>
+        </div>
+        <!-- wave -->
+        <app-waves-shape></app-waves-shape>
+    </div>
+    
+
+     <!-- Part 2 -->
+
+     <div class="container round-container-about mt-5"  id="about">
+    <div class="row mt-5">
+
+
+        <div class="col-lg-6 col-md-9 col-sm-10">
+            <div  class="me-5 mt-12">
+                <p class="text-blue fs-3 fw-bold">
+                   {{"about.who-we-are.header"|translate}}
+                </p>
+                <p class=" text-blue w-75 fs-6 mt-4">
+                    {{"about.who-we-are.desc-1"|translate}}
+
+                </p>
+                <p class=" text-blue w-75 fs-6 mt-4">
+                    {{"about.who-we-are.desc-2"|translate}}
+
+                </p>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <button class="button2 mt-5 mt-md-1"> {{"home.download-btn"|translate}} </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+          
+         
+           
+        </div>
+
+        <div class="col-lg-4 col-md-9 col-sm-10"> 
+            <div class="row mt-5  ">
+                <div class="col-md-6">
+                    <div class="cardy border-0  ">
+                        <img [ngSrc]="'../../../assets/images/home/about-us/startup7.jpg'" class="  cardy-img-top rounded ms-5" alt=" 1"  loading="lazy" width="370" height="450">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cardy border-0 ">
+                        <img [ngSrc]="'../../../assets/images/home/about-us/startup8.jpg'" class=" cardy-img-top rounded img-overlap-second" alt=" 2" loading="lazy" width="370" height="390">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" #scrolledSection>
+    <div class="row mt-5  solutions">
+        <div class="col-12">
+            <p class="text-blue text-center fw-bold fs-1"> {{"about.solutions.header"|translate}}</p>
+        </div>
+        <div class="col-12">
+            <p class="text-blue text-center fs-6">{{"about.solutions.description"|translate}} </p>
+        </div>
+    </div>
+    <!-- Cards Section -->
+    <div class="row mt-5 justify-content-center">
+        <div *ngFor="let card of cards; let i = index" class="col-12 col-md-6 col-lg-3 mb-4 d-flex justify-content-center">
+          <div class="card text-center shadow border-0 h-100  custome-card">
+            <div class="card-body" data-aos="fade-up" [attr.data-aos-delay]="(i + 1) * 100">
+                <!-- icon -->
+              <img [src]="card.img" style="width: 20%;" class="mb-3 mt-5">
+               
+              <!-- text -->
+              <div style="font-family: 'bahij';">
+                <h5 class="card-title mt-3" style="color: #132f55;">
+                  {{ card.name }}
+                </h5>
+
+                <p class="card-text mt-3">{{ "about.selution.p" | translate }}</p>
+                <p class="text-center">
+                  <a routerLink="" class="text-mint fw-semibold text-decoration-none">{{ "common.learn-more" | translate }}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+<!-- part3 statics -->
+<div class="container-fluid round-container-statics mt-5 solutions">
+    <div class="row">
+        <p class="text-blue fs-2 text-center mb-0 mt-3 fw-bold">{{"about.statics-title"|translate}} </p>
+        <div class="col-lg-6 col-md-10 col-sm-11 mt-5">
+            <div class="progress-text">
+                <p class="text-blue fs-2 fw-bold padding-custome">{{"about.statics-description"|translate}} </p>
+            </div>
+            <div class="bars mt-5 padding-custome">
+                <div class="bar-one">
+                    <p class="text-blue  ms-1 fw-semibold">{{"about.statics1"|translate}}</p>
+                    <div class="progress">
+                        <div class="progress-bar fw-semibold" role="progressbar" style="width: 60%; background-color: #d3a00f;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="bar-two mt-3">
+                    <p class="text-blue ms-1 fw-semibold">{{"about.statics2"|translate}}</p>
+                    <div class="progress">
+                        <div class="progress-bar fw-semibold" role="progressbar" style="width: 90%; background-color: #d3a00f;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="bar-three mt-3">
+                    <p class="text-blue ms-1 fw-semibold">{{"about.statics3"|translate}}</p>
+                    <div class="progress">
+                        <div class="progress-bar fw-semibold" role="progressbar" style="width: 70%; background-color: #d3a00f;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="bar-four mt-3">
+                    <p class="text-blue ms-1 fw-semibold">{{"about.statics4"|translate}}</p>
+                    <div class="progress">
+                        <div class="progress-bar fw-semibold" role="progressbar" style="width: 75%; background-color: #d3a00f;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="bar-five mt-3">
+                    <p class="text-blue ms-1 fw-semibold">{{"about.statics5"|translate}}</p>
+                    <div class="progress">
+                        <div class="progress-bar fw-semibold" role="progressbar" style="width: 66%; background-color: #d3a00f;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-10 col-sm-11 mt-7">
+            <div class="row hide-section">
+                <div class="col-lg-6 col-md-10 col-sm-11 mb-4">
+                    <div class="cardy border-0 shadow-sm">
+                        <img [ngSrc]="'../../../assets/images/home/about-us/about us/احصائيات-الشركة-10.jpg'" class="cardy-img-top rounded ms-5 w-100" alt="Image 1" loading="lazy" width="337" height="335">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-10 col-sm-11 mb-4">
+                    <div class="cardy border-0 shadow-sm">
+                        <img [ngSrc]="'../../../assets/images/home/about-us/about us/احصائيات-الشركة.jpg'" class="cardy-img-top rounded img-overlap w-100" alt="Image 2" loading="lazy" width="337" height="335">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-trusted-by></app-trusted-by>
+</div>
+
+
+
+ <!-- mission and vission -->
+ <app-our-mission-and-vission></app-our-mission-and-vission>
+  
+
+<!-- part4 about -->
+
+
+
+
+<!-- part5 team -->
+<!-- <app-our-team class="mt-5"></app-our-team> -->
+
+
+
+
+<!-- feedback -->
+ <app-feedback [items]="testimonials" carouselId="myDynamicCarousel"></app-feedback>
+
+
+  <!-- faq -->
+  <app-block-faq
+  [title]="'الأسئلة الشائعة '"
+  [faqs]="[
+    { question: 'ما هي شركة يوجيتك؟ ', 
+    answer:'هي شركة برمجيات، تأسست عام 2018، وهي تتبع مجموعة شركة تحمل نفس الاسم  تعمل في مجالات مختلف مثل المقاولات وتجارة الأجهزة الإلكترونية و تعمل الشركة في مجال تطوير وتصميم البرامج الإدارية والمحاسبية، وتصميم المواقع والمتاجر والتطبيقات الإلكترونية  '},
+     
+    { question: 'ما هي الخدمات التي تقدمها شركة يوجيتك؟ ',
+      answer: 'يوجيتك تقدم العديد من الخدمات البرمجية مثل تصميم وتطوير البرامج الإدارية والمحاسبية بجانب تصميم المتاجر الإلكترونية والتطبيقات والمواقع الإلكترونية التعريفية والخدمية. ' },
+    
+    { question: 'هل تقدم شركة يوجيتك خدمة الدعم الفني على جميع خدماتها؟ ',
+      answer: ' نعم تقدم يوجيتيك خدمات الدعم الفني الخاصة بهذه الخدمات، للمساعدة في حل وإزالة العقبات التي تواجه عملائها.' }
+
+     
+  ]"
+  imageSrc="../../../assets/images/home/faq/faq.jpg"
+></app-block-faq><!-- call-to-action -->
+<div class="container round bg  call-to-action">
+    <div class="row">
+        <div class="col-lg-6 col-sm-10">
+            <p class="text-blue me-custome my-custom fs-4 fw-bold">
+                {{"about.callToAction.header"|translate}}
+            </p>
+        </div>
+
+        <div class="col-lg-6 col-sm-10">
+            <button class="button1 my-custom-btn">{{"about.callToAction.btn"|translate}}</button>
+        </div>
+    </div>
+</div>
+
+ 
+<app-pop-up-offers></app-pop-up-offers>
+
+
+<app-footer class="footer"></app-footer>

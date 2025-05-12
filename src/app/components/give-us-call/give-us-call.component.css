@@ -1,0 +1,59 @@
+
+.custome-card{
+    width: 280px !important;
+    transition: all 0.2s ease-out;
+    border-bottom: 3px solid transparent; 
+    position: relative;
+    
+
+}
+.custome-card:hover {
+    transform: translateY(-15px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    /* border-bottom: 3px solid #132f55;  */
+}
+
+.custome-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 5px;
+    background-color: #132f55; 
+    transition: width 0.2s ease-out, left 0.2s ease-out;
+}
+
+.custome-card:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.row {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+#bg-section{
+    background-image: url('../../../assets/images/home/contact-us/transport-bg3.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 50px 0; 
+    border-radius: 15px; 
+}
+a{
+    text-decoration: none;
+}
+.social-icons {
+    .icon {
+      color: #fff;
+      font-size: 18px;
+      margin-left: 15px;
+      text-decoration: none;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #d3a00f !important; 
+      }
+    }
+  }

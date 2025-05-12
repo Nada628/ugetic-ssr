@@ -1,0 +1,239 @@
+*{
+  font-family: 'bahij';
+
+}
+.custome-card {
+    width: 170px; 
+    height: 170px; 
+    border-radius: 5px;
+    border-color: #f5f6fe;
+    background-color: #f5f6fe ;
+
+}
+.bg-img img{
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+.card-caption {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #132f55;
+}
+
+.text-blue{
+    color: #132f55;
+  }
+  
+  .step-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #d3a00f; 
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+  }
+  .step-circle:hover {
+    box-shadow: 
+    0 0 8cap rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(0, 0, 0, 0.25),   
+    0 0 18px rgba(0, 0, 0, 0.15);  
+    
+    border: 3px solid #d3a00f;   
+    outline: 5px solid rgba(0, 0, 0, 0.1);
+    outline-offset: 5px; 
+    
+    transform: scale(1.2); 
+  }
+  /* Line between steps */
+  .step-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 35px; /* Adjust this to align with circle */
+    right: 70%;
+    width: 360px;
+    height: 1px;
+    background-color: #ddd;
+  }
+
+  /* Hide the line after the last step */
+  .step-wrapper:last-child::after {
+    display: none;
+  }
+  .mt-6{
+    margin-top: 8rem;
+  }
+  .mt-circle{
+    margin-top: 6rem;
+
+  }
+
+
+  .step-number {
+    position: relative; /* Allow spinner to be absolutely positioned within the circle */
+    z-index: 1; /* Keep the number above the spinner */
+  }
+
+ 
+
+  /* Hide the spinner by default */
+  .spinner-border {
+    display: none; /* Initially hide the spinner */
+    position: absolute; /* Position the spinner absolutely */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust position */
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .button1 {
+    background-color:white ;
+    border: 1px solid #d3a00f;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #d3a00f;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'bahij';
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  .button1:hover,
+  .button1:active {
+    background-color: #d3a00f;
+    background-position: 0 0;
+    color: white;
+  }
+  
+  .button1:active {
+    opacity: .5;
+  }
+  @media(max-width:776px){
+    .step-wrapper::after{
+      display: none;
+    }
+  }
+
+  .mt-6{
+    margin-top: 8rem;
+  }
+  .accordion-item {
+    margin-bottom: 1rem; 
+    border: 0.8px solid #e7e7e7; 
+    border-radius: 4px; 
+  }
+
+  .accordion-button {
+    border: none; 
+    background-color: #fff;
+    color: #132f55; 
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #132f55; 
+  }
+
+  .accordion-body {
+    background-color: #fff; 
+  }
+
+ .wavies > use{
+  animation: waveAround 12s linear infinite;
+  &:nth-child(1) { animation-delay:-2s; }
+  &:nth-child(2) { animation-delay:-2s; animation-duration:5s }
+  &:nth-child(3) { animation-delay:-4s; animation-duration:3s }
+}
+
+@keyframes waveAround{
+  0% { transform: translate(-90px , 0%) }
+  100% { transform: translate(85px , 0%) }
+}
+
+body {
+  height: 100vh;
+  background-color: rgba(black, 0.8);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.about-header{
+  font-weight: 600px;
+  letter-spacing: -0.52px;
+  line-height:4.25rem;
+
+}
+.about-paragraph{
+  font-size: 18px ;
+  line-height: 2rem ;
+  text-align:center;
+  width: 70%;
+}
+@media(max-width:500px){
+  .bg-img img{
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+}
+
+.faq-img{
+  margin-right: 0px !important;
+}
+.faq-img img{
+  width: 100% !important;
+
+}
+.mt-custome{
+  margin-top: -4.5rem;
+}
+
+.about-header{
+  font-weight: 600px;
+  letter-spacing: -0.32px;
+  line-height:34px !important;
+  font-size: 18px !important;
+  margin-top: 14rem;
+
+}
+.about-paragraph{
+font-size: 0.875rem !important ;
+line-height: 32px !important;
+text-align:center !important;
+width: 167% !important;
+
+/* letter-spacing:  0.09rem; */
+
+}
+}
+
+/* faq */
+.accordion-button::after{
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+.container{
+  max-width: 87%;
+}
+.accordion-button{
+  text-align: right !important;
+}

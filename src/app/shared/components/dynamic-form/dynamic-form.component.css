@@ -1,0 +1,73 @@
+
+#dynamic-form{
+  height: fit-content;
+  background-color: #e5e8f5;
+}
+.bg-img{
+    background-image: url(../../../../assets/images/home/faq/dots-shape.png);
+    background-size: auto;
+    background-position: center center ;
+    background-repeat: no-repeat;
+    transform: translate3d(0px, 0px, 0px);
+    font-family: 'bahij';
+
+}
+.form-part{
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px; 
+    background-color: #fff; 
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
+.button1 {
+    background: #d3a00f;
+    border: 1px solid #d3a00f;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'bahij';
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.button1:hover,
+.button1:active {
+    background-color: #fff;
+    background-position: 0 0;
+    color: #d3a00f;
+}
+
+.button1:active {
+    opacity: .5;
+}
+.input-bg {
+    background-color: #f2f2f2; 
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    padding: 5px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+}
+

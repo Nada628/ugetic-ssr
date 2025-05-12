@@ -1,0 +1,17 @@
+<nav class="navbar ms-auto fixed-bottom">
+    <ul class="nav-list">
+      <li class="nav-item" [class.active]="activeSection === 'features'">
+        <a style="cursor: pointer;" (click)="scrollToSection('features')">المزايا </a>
+      </li>
+      <li class="nav-item" [class.active]="activeSection === 'apps'">
+        <a style="cursor: pointer;" (click)="scrollToSection('apps')">الخصائص </a>
+      </li>
+      <li class="nav-item" [class.active]="activeSection === 'reviews'">
+        <a style="cursor: pointer;" (click)="scrollToSection('reviews')">آراء العملاء</a>
+      </li>
+      <li class="nav-item" [class.active]="activeSection === 'contact'">
+        <a style="cursor: pointer;" (click)="scrollToSection('contact')">تواصل معنا</a>
+      </li>
+    </ul>
+  </nav>
+  

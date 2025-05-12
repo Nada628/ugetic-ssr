@@ -1,0 +1,59 @@
+<!-- what our client say -->
+ <div class="container">
+  <!-- first row -->
+  <div class="row mt-5">
+    <div class="col-lg-8 col-md-6 me-4 me-md-0">
+      <p class="text-blue ms-5 fw-bold fs-2 fs-md-3 w-75">
+        What our clients say is extremely
+        important to us
+      </p>
+    </div>
+    <!-- <div class="col-lg-4 col-md-6 mt-2 me-4 me-md-0">
+      <button class="button2 w-50  ms-8">Start Free Trial</button>
+  </div> -->
+  </div>
+  <!-- second row -->
+  <div class=" my-5 slider container-fluid">
+      <div class="slider-track d-flex align-items-center">
+        <div *ngFor="let review of reviews" class="slide">
+          <div class="card  border">
+            <div class="d-flex flex-column flex-md-row align-items-center p-3 text-center text-md-start">
+             <img 
+              src="/assets/images/home/review/review3.jpg"
+              class="img-fluid me-3"
+              alt="Review Image"
+              loading="lazy"
+              width="60"
+              height="60"
+          >
+          
+              <div class="me-3">
+                <p class="mt-2 fs-6 fw-semibold text-blue ">{{ review.review }}</p>
+                <hr>
+                <div class="d-flex align-items-center mt-3">
+                  <p class="fw-bold mb-0" style="color: #21416f;">{{ review.name }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+  
+      <!-- Arrow controls -->
+      <button class="arrow prev" (click)="prevSlide()">
+        <i class="fa-solid fa-chevron-left"></i>
+            </button>
+      <button class="arrow next" (click)="nextSlide()">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+  
+      <!-- Pagination dots -->
+      <div class="pagination-dots">
+        <span class="dot" *ngFor="let dot of dots; let i = index" [class.active]="i === currentSlide"></span>
+      </div>
+    </div>
+  </div>
+  
+  

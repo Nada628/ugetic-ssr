@@ -1,0 +1,141 @@
+/* footer style */
+#footer{
+  background-color:#143055;
+  font-family: 'bahij';
+  /* position: fixed;
+  top: 0; 
+  width: 100%; */
+}
+
+
+.footer-element {
+  color: white;
+  font-family: "bahij";
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-element::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d3a00f; 
+  transition: width 0.3s ease, left 0.3s ease;
+  left: auto;
+}
+.footer-head{
+  color: white;
+  font-family: "bahij";
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-element:hover {
+  color: #d3a00f; 
+}
+
+.footer-element:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.footer-element a{
+  text-decoration: none;
+  color: white;
+    font-family: "bahij";
+  }
+.footer-header{
+color: white;
+  font-family: "bahij";
+
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+}
+
+.footer-logo img{
+width: 50%;
+height: auto;
+margin: 0 auto;
+}
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+
+    :is(li) {
+      display: inline;
+    }
+
+    :is(a) {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, border-bottom 0.3s;
+
+      &:hover {
+        border-bottom: 2px solid #d3a00f; /* Underline on hover */
+      }
+    }
+  }
+}
+
+.social-icons {
+  .icon {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #d3a00f; 
+    }
+  }
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  gap: 15px; 
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: border-bottom 0.3s;
+}
+
+.footer-links a:hover {
+  border-bottom: 2px solid #fff; 
+}
+.fw-a{
+  font-weight: bold !important;
+}

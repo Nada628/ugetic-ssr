@@ -1,0 +1,79 @@
+{
+
+    "Language":"English",
+    "English" :"English",
+    "Arabic":"Arabic",
+    "Home": "Home",
+    "aboutUs": "About us",
+    "Solutions": " Solutions",
+    "Parteners": "Parteners",
+    "References": "References",
+    "Customers": "Customers",
+    "ContactUs": "Contact us",
+    "sign":"SignIn / SignUp",
+
+
+    "sliderHeader1":"We are",
+    "sliderHeader2":"BUSINESS ENGINES",
+    "sliderHeader3":"Digital Transformation",
+    "sliderP1": "The experts in our field",
+    "sliderP2": "Staying Smarter, Together",
+    "sliderBtn": "Know more",
+
+    "trusted-by":"trusted by :",
+
+
+    "WHAT MAKES US UNIQUE":"WHAT MAKES US UNIQUE",
+    "uniqueP1_1":"Business Engines was founded in 2021 to operate in Egypt to build value-added solutions on the region's market",
+    "uniqueP1_2":"our main business sector is Fintech and integrating technology into the products of financial solutions firms",
+    "uniqueP1_3":"to improve their use and delivery to consumers.",
+    "Vision":"Vision",
+    "visiontext":
+    "To be the first fintech company in Egypt and then World Wide with our standards and values and to help all companies to transfer their daily routine paperwork into real digital transformation paperless amusing work.",
+    "Mission":"Mission",
+    "missiontext":
+    "To gain the trust and confidence of our clients through crystal clear communication, reasonable and objective guidance, together with a genuine and palpable concern for their long-term and comprehensive financial growth.",
+
+    "OUR":"OUR",
+    "Token": "Token",
+    "Payment Terminal": "Payment Terminal",
+    "E-Invoice": "E-Invoice",
+    "E-Tender": "E-Tender",
+    "CRM": "CRM",
+    "ERP": "ERP",
+    "LMS": "LMS",
+    "Market Place": "Market Place",
+    "E-Wallet": "E-Wallet",
+    "Digital Signature": "Digital Signature",
+    "PKI": "PKI",
+    "Others": "Others",
+
+    "Refrences-text":"Business Engines started many projects in the field of digital transformation to serve many important sectors across Egypt and MENA area.",
+    "Digital signature":"Digital signature",
+    "_transformation":"transformation",
+    "transformation":"transformation",
+    "Billing System":"Billing System",
+    "Students smart":"Students smart",
+    "cards for HOME":"cards for HOME",
+    "Ministry of":"Ministry of",
+    "finance":"finance",
+
+    "Contact":"Contact",
+    "US":"US",
+    "formHeader": "leave us your info",
+    "formP":"Fill the form and we will get back to you soon",
+    "form-name":" your name",
+    "form-email":" your email",
+    "form-message":" message",
+    "Send message":"Send message",
+
+    "footer-about":
+    "About Business Engines was founded in 2021 to operate in Egypt to build value added solutions o the region market, our main business sector is fintech, integrating technology into the products of financial services firm to improve their use and delivery to consumers.",
+    "Quick Links":"Quick Links",
+    "Address":"Address",
+    "addressP":"Business Engines Technology OFFICE 508, 5TH FLOOR, NEMAA BUILDING, 155 EMTEDAD RAMSES ST. 6TH DISTRICT, NASER CITY, Cairo, Egypt"
+
+
+
+
+}

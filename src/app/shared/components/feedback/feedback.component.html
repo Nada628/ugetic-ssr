@@ -1,0 +1,28 @@
+<div class="container feedback">
+    <div class="row text-center" style="margin-top: 8rem;">
+      <p class="text-center text-blue fs-2 fw-bold">{{ "feedback.title" | translate }}</p>
+      <div [id]="carouselId" #carousel class="carousel slide mt-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div *ngFor="let item of items; let i = index" 
+               class="carousel-item" 
+               [class.active]="i === 0">
+            <img src="../../../../assets/images/home/review/review3.jpg" class="circle-img" >
+            <h5 class="mt-3 text-blue fw-semibold">{{ item.review }}</h5>
+            <div class="mt-3">
+              <span class="fw-bold mb-0" style="color: #21416f;">{{ item.name }}</span>
+              <!-- <span class="ms-2 text-secondary">{{ item.role }}</span> -->
+            </div>                
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#' + carouselId" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#' + carouselId" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  

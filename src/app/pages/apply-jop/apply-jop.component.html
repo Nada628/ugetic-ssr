@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+<div class=" position-relative">
+    <!-- Background -->
+    <div class="bg-img position-relative">
+        <img [ngSrc]="'../../../assets/images/home/contact-us/software-bg.jpg'" class="w-100" alt="About Us" loading="lazy" width="1500"  height="855">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white d-flex flex-column align-items-center">
+            <h2 class="  mb-4">
+                <strong>
+                    هل تبحث عن فرصة جديدة؟
+                </strong>
+            </h2>
+            <!-- <p class="fw-semibold fs-5 text-center text-light"> {{"contact-us.contact.header2"|translate}}</p> -->
+        </div>
+    </div> 
+
+    <div class="container w-75 mb-5" id="Contact-us" style="margin-top: -300px;"> 
+        <div class="row">
+            <!-- Left Column: Form -->
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <p class="mb-4 text-blue fs-5 text-center mt-5 fw-bold">{{"contact-us.formHeader"|translate}}</p>
+                <p class="mb-4 text-blue fs-custome text-center fw-semibold">{{"contact-us.formP"|translate}}</p>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="w-75 mt-4"> 
+
+                  <!-- name -->
+                    <div class="mb-3"> 
+                        <label for="cv" class="form-label"> الاسم</label>
+                      <input 
+                        type="text"
+                        class="form-control"
+                        id="name" 
+                        formControlName="name"
+                        required
+                          >
+                    </div>
+
+                    <!-- email -->
+                    <div class="mb-3">
+                        <label for="cv" class="form-label"> البريد الالكتروني</label>
+
+                        <input
+                         type="email" 
+                         class="form-control" 
+                         id="email" 
+                         formControlName="email"
+                         required
+                         >
+                    </div>
+
+                    <!-- number -->
+                    <div class="mb-3"> 
+                        <label for="cv" class="form-label"> 
+                            رقم الهاتف
+                        </label>
+                      <input 
+                      type="number" 
+                      class="form-control" 
+                      id="number"
+                      required>
+                    </div>
+
+                    <!-- cv -->
+                    <div class="mb-3">
+                        <label for="cv" class="form-label">السيرة الذاتية</label>
+
+                        <input 
+                        class="form-control" 
+                        id="cv" 
+                        type="file"
+                        required
+                        >
+                    </div>
+                    <div class="text-center"> 
+                        <button type="submit" class="btn button1">{{"contact-us.send-message"|translate}}</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="col-md-6 image-column d-flex justify-content-center align-items-center">
+                <img src="../../../assets/images/home/blogs/newsletter.png" alt="Contact Image" class="img-fluid">
+            </div>
+        </div>
+    </div> 
+
+   
+    <app-pop-up-offers></app-pop-up-offers>
+
+    <app-footer></app-footer>
+</div>

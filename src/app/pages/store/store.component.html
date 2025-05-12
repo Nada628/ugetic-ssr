@@ -1,0 +1,56 @@
+<!-- //store page -->
+<app-navigation-bar></app-navigation-bar>
+
+<app-header
+ class="mb-5" 
+ [headerKey]="dynamicSectionData.headerKey"
+    [rotatingTextKeys]="dynamicSectionData.rotatingTextKeys"
+    [staticTextKey]="dynamicSectionData.staticTextKey"
+    [watchButtonKey]="dynamicSectionData.watchButtonKey"
+    [downloadButtonKey]="dynamicSectionData.downloadButtonKey"
+    [imageUrl]="dynamicSectionData.imageUrl"
+ >
+</app-header>
+
+<!-- <app-side-bar></app-side-bar> -->
+<app-trusted-by class="mt-5"></app-trusted-by>
+<app-store-feature-one id="features"></app-store-feature-one>
+<app-store-feature-two-three  id="apps"></app-store-feature-two-three>
+
+<app-tabs [tabs]="tabsData"
+          [tabsMetadata]="tabsMetadata"
+          parentComponent="StoreComponent">
+</app-tabs>
+<app-dynamic-services-card
+
+  [title]="'أفضل طريقة إدارة المنتجات '"
+  [desc1]="'مع يوجيتك ستجد متجرك يتيح لك إضافة الصنف بخصائص متنوعة، ويمكنك تحديد أكثر من سعر لكل صنف على حدة.'"
+
+  [card1Title]="'تصميم المتجر بأكثر من لغة'"
+  [card1Desc1]="''"
+
+  [card2Title]="'إرفاق الصور والفيديوهات لكل منتج. '"
+  [card2Desc1]="''"
+ 
+
+  [card3Title]="'دعوة عملائك إلى تقديم مراجعات عن منتجاتك.'"
+  [card3Desc1]="'أضاف المنتجات الشبيه وذات صلة.'"
+
+></app-dynamic-services-card>
+
+
+
+<app-reviews id="reviews"></app-reviews>
+
+<app-home-call-to-action
+ [title]="'ابدأ الآن وحقق حلمك بامتلاك متجرك الإلكتروني الخاص!'"
+ [button]="'تواصل معنا'"
+ >
+
+</app-home-call-to-action>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer id="contact"></app-footer>
+
+

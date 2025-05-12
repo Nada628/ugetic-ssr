@@ -1,0 +1,13 @@
+.circle-img {
+    width: 120px; 
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(181, 178, 178, 0.105); 
+    border-radius: 50%; 
+}

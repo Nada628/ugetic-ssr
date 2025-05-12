@@ -1,0 +1,67 @@
+<div class="container">
+    <!-- feature2 -->
+    <div class="row">
+      <div class="col-lg-5 col-sm-10">
+        <div class="me-5 me-md-0">
+          <div class="header">
+            <p class="fw-bold m-s">
+              {{ featureTwoHeaderKey | translate }}
+            </p>
+          </div>
+          <div class="middle">
+            <p class="m-s lh-base mt-4">
+              {{ featureTwoDescKey | translate }}
+            </p>
+          </div>
+          <div class="icons-text-2">
+            <div class="d-flex flex-column ms-5">
+              <ng-container *ngFor="let item of featureTwoItems">
+                <div class="d-flex align-items-center w-100 mb-2 mt-2">
+                    <i class="fa-solid fa-circle-check ms-2" style="color: #d3a00f;"></i>
+                    <span class="fw-semibold item-text" style="color: #132f55;">{{ item.headerKey | translate }}</span>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fature2 col-lg-7 col-sm-10">
+      <img [src]="featureTwoImageUrl" alt="feature-two-image" >
+      </div>
+    </div>
+  
+    <!-- feature3 -->
+    <div class="row">
+      <div class="col-lg-6 col-sm-10">
+        <div class="feat-1-text mt-5 me-4 me-md-0">
+          <div class="header mt-3">
+            <p class="fw-bold mt-5 m-s">
+              {{ featureThreeHeaderKey | translate }}
+            </p>
+          </div>
+          <div class="middle">
+            <p class="m-s lh-base mt-4">
+              {{ featureThreeDescKey | translate }}
+            </p>
+          </div>
+          <div class="icons-text">
+            <div class="d-flex flex-column ms-5 mt-5">
+              <ng-container *ngFor="let item of featureThreeItems">
+                <div class="d-flex align-items-center w-100 mb-1">
+                  <img *ngIf="item.icon" [src]="item.icon" class="mt-2 responsive-icon" />
+                  <span class="fw-semibold item-text me-3 fs-5" style="color: #21416f;">{{ item.headerKey | translate }}</span>
+                </div>
+                <p *ngIf="item.descKey" class="me-5 mt-2 item-text text-secondary fs-5">
+                  {{ item.descKey | translate }}
+                </p>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fature3 col-lg-5 col-sm-10 mt-4">
+        <img [src]="featureThreeImageUrl" alt="feature-three-image" >
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,175 @@
+<div class="container-fluid " id="footer" >
+
+  <footer class=" text-center text-lg-start text-primary border-bottom border-2 border-dark-subtle">
+    <div class="container p-4">
+      <!-- 1st row -->
+      <div class="row nav-row mt-3 ">
+        <div class="col-md-9 nav-links">
+          <ul class="nav-list row">
+            <li class="col-12 col-md-auto ms-3"><a  routerLink="/about-us">من نحن</a></li>
+            <li class="col-12 col-md-auto ms-3"><a routerLink="/faq">الاسئلة الشائعة</a></li>
+            <li class="col-12 col-md-auto ms-3"><a routerLink="/privacy-policy">الخصوصية</a></li>
+            <li class="col-12 col-md-auto ms-3"><a routerLink="/contact-us">تواصل معنا</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-3 social-icons text-right mt-3 mt-md-0">
+          <a *ngFor=" let icon of social" [href]="icon.link" target="_blank"  class="icon">
+            <i class="fab fa-facebook-f" *ngIf="icon.name === 'facebook'"></i>
+            <i class="fab fa-twitter" *ngIf="icon.name === 'X'"></i>
+            <i class="fab fa-linkedin-in" *ngIf="icon.name === 'linkedin'"></i>
+            <i class="fa-brands fa-youtube" *ngIf="icon.name === 'youtube'"></i>
+            <i class="fa-brands fa-instagram" *ngIf="icon.name === 'instagram'"></i>
+          </a>
+        </div>
+      
+      </div>
+        <hr class="text-white">
+
+        <!-- 2nd row -->
+      <div class="row my-5">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="footer-logo ">
+            <!-- <h5 class="text-white text-end ">يوجتيك</h5> -->
+             <img [ngSrc]="'../../../assets/images/home/ugitech--logo-02.png'" priority width="150" height="53" >
+            <p class="text-white mt-3 text-end" style="text-align: justify;">
+              {{"footer.solgan"|translate}}
+            </p>
+          </div>
+
+        </div>
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0  " >
+
+          <ul class="list-unstyled text-end">
+            <li class="mb-2 fw-semibold">
+              <a routerLink="/home" class="footer-head  ">{{"footer.about.company"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a routerLink="/about-us" class="footer-element ">{{"footer.about.who-we-are"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a routerLink="/services" class="footer-element "> {{"footer.about.our-services"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a href="#!" class="footer-element ">{{"footer.about.our-clients"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a routerLink="/blog" class="footer-element ">{{"footer.about.blogs"|translate}}</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0 ">
+          <ul class="list-unstyled text-end ">
+            <li class="mb-2 fw-semibold">
+              <a href="#!" class=" footer-head ">{{"footer.programs.header"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a href="#!" class="footer-element ">{{"footer.programs.item1"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a href="#!" class="footer-element ">{{"footer.programs.item2"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a href="#!" class="footer-element ">{{"footer.programs.item3"|translate}}</a>
+            </li> <br>
+            <li class="mb-2">
+              <a href="#!" class="footer-element ">{{"footer.programs.item4"|translate}}</a>
+            </li>
+
+          </ul>
+        </div>
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0 ">  
+            <ul class="list-unstyled text-end">
+              <li class="mb-2">
+                <a href="#!" class=" footer-head  fw-a">{{"footer.downloads.header"|translate}}</a>
+              </li> <br>
+              <li class="mb-2">
+                <a href="#!" class="footer-element ">{{"footer.downloads.item1"|translate}}</a>
+              </li> <br>
+              <li class="mb-2">
+                <a href="#!" class="footer-element ">{{"footer.downloads.item2"|translate}}</a>
+              </li> <br>
+             
+  
+            </ul>
+          </div>
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-end">
+          <ul class="list-unstyled text-end">
+            <li >
+              <p class=" footer-head fw-semibold">
+                {{"footer.contacts.header"|translate}}
+              </p>
+            </li>
+            <li>
+              <p class="footer-element">
+                  {{"footer.contacts.cairo-branch.header"|translate}}
+                </p>
+                <p class="footer-element text-end">
+                  <a href="https://maps.app.goo.gl/RP2keUXW2hqjndS36" target="_blank">
+                  {{"footer.contacts.cairo-branch.address"|translate}}
+                  </a>
+
+                </p>
+                <p class="footer-element">
+                  <a [href]="'tel:' + cairoNumber"  >
+                    {{"footer.contacts.cairo-branch.phone"|translate}}
+                  </a>
+                </p>
+            </li>
+            <li>
+              <p class="footer-element">
+                  {{"footer.contacts.kfs-branch.header"|translate}}
+                </p>
+                <p class="footer-element">
+                  <a href="https://maps.app.goo.gl/F7BcJWioNSNVrWx88" target="_blank">
+
+                    {{"footer.contacts.kfs-branch.address"|translate}}
+                  </a>
+
+                </p>
+                <p class="footer-element">
+                  <a [href]="'tel:' + KFSNumber"  >
+                    {{"footer.contacts.cairo-branch.phone"|translate}}
+                  </a>
+                </p>
+            </li>
+          
+
+          </ul>
+        </div>
+      </div>
+      <hr class="text-white">
+    <!-- 3rd row -->
+    <div class="row nav-row mt-5 ">
+      <div class="col-md-9 nav-links ">
+        <div class="nav-list">
+          <p class="text-white">
+            جميع الحقوق محفوظة لدى شركة يوجيتك 2024
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <ul class="footer-links ">
+          <li><a routerLink="/usage-policy">سياسة الاستخدام</a></li>
+          <li><a routerLink="/privacy-policy">سياسة الخصوصية</a></li>
+        </ul>
+      </div>
+      
+    </div>
+    </div>
+
+
+
+  </footer>
+
+
+</div>

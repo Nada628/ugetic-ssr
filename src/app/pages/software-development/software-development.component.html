@@ -1,0 +1,112 @@
+<app-navigation-bar></app-navigation-bar>
+
+<app-header
+ class="mb-5" 
+ [headerKey]="dynamicSectionData.headerKey"
+    [rotatingTextKeys]="dynamicSectionData.rotatingTextKeys"
+    [staticTextKey]="dynamicSectionData.staticTextKey"
+    [watchButtonKey]="dynamicSectionData.watchButtonKey"
+    [downloadButtonKey]="dynamicSectionData.downloadButtonKey"
+    [imageUrl]="dynamicSectionData.imageUrl"
+ >
+</app-header>
+
+<!-- <app-side-bar></app-side-bar> -->
+<app-trusted-by class="mt-5"></app-trusted-by>
+
+<app-eom-feature1 
+  id="features"
+  [headerTextKey]="'عزز أعمالك بأنظمة إدارية ومحاسبية متكاملة'"
+  [paragraphTextKey]="'نساعدك في تصميم برامج محاسبية وإدارية متقدمة، توفر لك حلاً رقميًا متكاملاً لأتمتة العمليات وتحسين إدارة مواردك، مما يعزز كفاءة أعمالك'"
+  [cards]="featureCards"
+></app-eom-feature1>
+
+<app-featureTwoThree id="apps"  [featureTwoHeaderKey]="featureTwoData.headerKey"
+[featureTwoDescKey]="featureTwoData.descKey"
+[featureTwoItems]="featureTwoData.items"
+[featureTwoImageUrl]="featureTwoData.imageUrl"
+
+[featureThreeHeaderKey]="featureThreeData.headerKey"
+[featureThreeDescKey]="featureThreeData.descKey"
+[featureThreeItems]="featureThreeData.items"
+[featureThreeImageUrl]="featureThreeData.imageUrl">
+</app-featureTwoThree>
+
+<app-tabs [tabs]="tabsData"
+          [tabsMetadata]="tabsMetadata"
+          parentComponent="AppsComponent">
+</app-tabs>
+<app-dynamic-services-card
+
+  [title]="'خواص متطورة وسهلة الاستخدام'"
+  [desc1]="'اجعل أعمالك أكثر كفاءة مع حلول برمجية متميزة، تعزز من إدارتك المالية والإدارية لها، وتمنحك الاستقرار المالي والاداري. '"
+  [desc2]="'في يوجيتك نضمن لك استقرار أنظمتنا،  من خلال العديد من الخدمات المخصصة لك بشكل سنوي'"
+  
+  [card1Title]="'دعم فني سنوي'"
+  [card1Desc1]="' للحفاظ على استقرار النظام'"
+  [card1Image]="'assets/images/software/دعم فني سنوي .svg'"
+
+  [card2Title]="'نظام للمتابعة'"
+  [card2Desc1]="'للوقوف على تطورات أعمالك واحتياجاتها المستقبلية'"
+  [card2Image]="'assets/images/software/المتابعة.svg'"
+ 
+
+  [card3Title]="'نظام للتدريب'"
+  [card3Desc1]="'لضمان استفادة مؤسستك من جميع خصائص النظام والتعامل معه بالشكل الصحيح'"
+  [card3Image]="'assets/images/software/نظام للتدريب.svg'"
+
+
+></app-dynamic-services-card>
+<!-- <app-pop-up-offers></app-pop-up-offers> -->
+<app-reviews  id="reviews"></app-reviews>
+
+<app-block-faq
+  [title]="'الأسئلة الشائعة '"
+  [faqs]="[
+    { 
+     question: 'كيف يساعد تصميم البرامج وتطويرها الشركات ؟', 
+     answer:
+     'تصميم البرامج هو إنشاء وتنفيذ تطبيقات وبرامج مخصصة تحقق متطلبات خاصة للشركات في مجال الإدارة والمحاسبة والمجالات المختلفة، تعمل هذه البرامج على مساعدة الشركات وتعزيز كفاءة الأداء بها من خلال أتمتة العمل، وخَلق حلول عملية مبتكرة تُحَسن من تجربة العملاء وتحقق أهداف الشركة بسرعة وفعالية.'
+    },
+    
+     {
+      question: 'ما هي المدة اللازمة لتطوير وتصميم البرامج؟     ',
+      answer:
+      'تختلف المدة من مشروع لآخر فلا يوجد مدة محددة حيث تعتمد فترة إنشاء وتصميم البرامج على مدى تعقيد البرنامج والمزايا التي يقدمها، فقد تحتاج بعض البرامج البسيطة إلى شهرين أو ثلاثة، وقد تتطلب بعض البرامج المعقدة فترة قد تصل إلى 6 أشهر وأكثر.'
+      },
+    
+    { question: 'ماهي تكلفة تصميم البرامج؟    ',
+      answer: 
+      'تختلف التكلفة من مشروع لآخر وفقًا لحجم المشروع ودرجة تعقيد البرنامج والمجال الذي يستهدفه، حيث يعتمد تحديد التكلفة على عدة عوامل مختلفة، وتقدم يوجيتك باقة من أفضل الأسعار للتصميم وتطوير البرامج احرص على مراجعتها.'
+    },
+
+      {
+      question:'هل من الممكن تجربة البرامج والتطبيقات قبل الإطلاق؟ ',
+      answer:
+      'بالتأكيد نعم فهناك نسخة تجريبية يتم إطلاقها للاختبار وتجربة مدى استجابة البرامج وأداء الوظائف والمهام الأساسية ومعرفة رد فعل العملاء بعد الإستخدام للوقوف على أي نقاط تحتاج التحسين والتعديل قبل التفعيل الرسمي.'
+    },
+    {
+      question:' هل من الممكن تحديث وتطوير البرامج التطبيق فيما بعد؟ ',
+      answer:
+      'بالتأكيد نعم، حيث أن 99% من البرامج والتطبيقات يتم تصميمها مع قابلية التحديث المستمر والتطوير من خلال إضافة مزايا جديدة للمستخدم أو تعديل بعض الخصائص لتواكب تطورات الأعمال وتلبي إحتياجات المستخدم طوال الوقت'
+    },
+    {
+      question:' كيف يمكنني اختيار شركة مناسبة لتطوير البرامج التي أحتاجها؟',
+      answer:
+      'أول خطوة ابدأ بالبحث عن شركات ذات تاريخ قوي وسابقة أعمال ناجحة ويمتلكون فريق تقني متطور، واحرص على مراجعة آراء العملاء، وتأكد من جودة خدمات الدعم والصيانة اللاحقة، وتعتبر يوجيتك افضل شركة تصميم مواقع في مصر يمكنك الإعتماد عليها بكل ثقة.'
+    },
+  ]"
+  imageSrc="../../../assets/images/home/faq/faq.jpg"
+></app-block-faq>
+
+<app-home-call-to-action 
+[title]="'هل أنت مستعد للارتقاء بأعمالك؟ دعنا نصمم لك نظامًا إداريًا أو محاسبيًا متكاملًا!'"
+[button]="' تواصل معنا الآن'"
+>
+</app-home-call-to-action>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer id="contact"></app-footer>
+
+

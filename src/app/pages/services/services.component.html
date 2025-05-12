@@ -1,0 +1,209 @@
+<app-navbar></app-navbar>
+
+    <!-- background img -->
+ 
+   <div class="bg-img position-relative " >
+        <img [ngSrc]="'../../../assets/images/home/app-services.png'" class="w-100" alt="Services"  class="w-100" width="100" height="42" loading="lazy">
+        <div class="position-absolute mt-custome top-50 start-50 translate-middle text-center text-white d-flex flex-column align-items-center p-3">
+            <h1 class=" about-header">
+               <strong>
+                {{"services.title"|translate}}
+               </strong>
+
+           </h1>
+            <h6 class=" mt-3 text-center text-light about-paragraph">
+              {{"services.description"|translate}}            
+            </h6>
+            <div class="arrow-button mt-5">
+                    <i class="bi bi-arrow-down-circle fs-3" 
+                     style="color: white; cursor: pointer;"
+                     (click)="scrollTo()" >
+                   </i>
+            </div>
+        </div>
+        <!-- wave -->
+        <app-waves-shape></app-waves-shape>
+    </div>
+    <!-- text -->
+     <div class="row mt-5" #scrolledSection>
+        <div class="text-center">
+            <p class="text-secondary fw-semibold fs-4">
+                {{"services.cards.header"|translate  }}
+            </p>
+            <p class="text-blue fw-bold fs-3">
+              {{"services.cards.desc"|translate  }}
+
+            </p>
+        </div>
+     </div>
+     <!-- cards -->
+        <div class="container mt-5">
+          
+
+          <div class="row mt-5 justify-content-center mx-auto">
+            <!-- Card 1 -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 d-flex flex-column align-items-center px-1">
+              <div class="card custome-card text-center p-3">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <!-- <img src="../../../assets/images/home/services/mobile-app-icon1.png" /> -->
+                   <img src="../../../assets/images/home/services/services/تصميم وتطوير البرامج الإدارية.svg">
+                </div>
+              </div>
+              <p class="card-caption text-center mt-4">
+                {{ names[0] || "Default Name 1" }}
+              </p>
+            </div>
+          
+            <!-- Card 2 -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 d-flex flex-column align-items-center px-1">
+              <div class="card custome-card text-center p-3">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <!-- <img src="../../../assets/images/home/services/mobile-app-icon2.png" /> -->
+                   <img src="../../../assets/images/home/services/services/تصميم المواقع.svg">
+                </div>
+              </div>
+              <p class="card-caption text-center mt-4">
+                {{ names[1] || "Default Name 2" }}
+              </p>
+            </div>
+          
+            <!-- Card 3 -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 d-flex flex-column align-items-center px-1">
+              <div class="card custome-card text-center p-3">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <!-- <img src="../../../assets/images/home/services/mobile-app-icon3.png" /> -->
+                   <img src="../../../assets/images/home/services/services/تصميم المتاجر .svg">
+                </div>
+              </div>
+              <p class="card-caption text-center mt-4">
+                {{ names[2] || "Default Name 3" }}
+              </p>
+            </div>
+          
+            <!-- Card 4 -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4 d-flex flex-column align-items-center px-1">
+              <div class="card custome-card text-center p-3">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                  <!-- <img src="../../../assets/images/home/services/mobile-app-icon4.png" /> -->
+                   <img src="../../../assets/images/home/services/services/تصميم التطبيقات.svg">
+                </div>
+              </div>
+              <p class="card-caption text-center mt-4">
+                {{ names[3] || "Default Name 4" }}
+              </p>
+            </div>
+          </div>
+          
+          
+        </div>
+        <!-- tabs -->
+     
+            <app-tabs [tabs]="tabsData"
+                       [tabsMetadata]="tabsMetadata" 
+                       parentComponent="ServicesComponent">
+            </app-tabs>
+
+    <!-- why-ugetic -->
+
+    <div class="container text-center mt-6">
+            <!-- Section title -->
+            <h2 class="fw-semibold text-blue mb-5">لماذا يوجيتيك؟</h2>
+          
+        
+     <!-- 4 steps row -->
+      <div class="row justify-content-between align-items-center position-relative mt-circle">
+        <div *ngFor="let step of steps" class="col-md-3 col-sm-6 mb-4 position-relative step-wrapper">
+          <div class="step-circle mb-3 mx-auto d-flex align-items-center justify-content-center">{{ step.number }}</div>
+          <h5 class="fw-bold mt-4">{{ step.title }}</h5>
+          <p class="text-muted">{{ step.description }}</p>
+        </div>
+      </div>
+
+      </div>
+
+         <!-- feedback -->
+    
+ <div class="container feedback">
+    <div class="row mt-5">
+        <div class="text-center">
+            <p class="text-secondary fw-bold">
+                TESTIMONIALS & REVIEWS FROM OUR CLIENTS
+
+            </p>
+          
+        </div>
+    </div>
+    <app-reviews></app-reviews>
+
+  
+  
+
+ </div>
+
+
+ <!-- faq -->
+ <div class="container">
+  <div class="row mt-6">
+      <div>
+          <p class="text-blue text-center fw-bold fs-2 "> {{"faq.title"|translate}} </p>
+       
+      </div>
+</div>
+<div class="container">
+<div class="row my-5">
+  <div class="col-lg-6 col-md-10 col-sm-11">
+    <div class="accordion" id="accordionExample1">
+      <!-- 1st Accordion Item -->
+      <div class="accordion-item mt-3">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed text-blue fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+           {{"services.faq.question1"|translate}}
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample1">
+          <div class="accordion-body">
+            <p class="text-blue">{{"services.faq.answer1"|translate}}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 2nd Accordion Item -->
+      <div class="accordion-item mt-3" >
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed text-blue fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            {{"services.faq.question2"|translate}}
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample1">
+          <div class="accordion-body">
+            <p class="text-blue">{{"services.faq.answer2"|translate}}</p>
+          </div>
+        </div>
+      </div>
+      
+   
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-10 col-sm-11">
+   <div class="faq-img me-5 ">
+    <img src="../../../assets/images/home/faq/faq.jpg">
+   </div>
+  </div>
+</div>
+</div>
+</div>
+
+ <!-- call-to-us -->
+<app-join-us-block></app-join-us-block>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer></app-footer>
+
+
+
+        
+        
+
+ 

@@ -1,0 +1,151 @@
+
+<div class=" position-relative">
+    <!-- Background -->
+    <div class="bg-img position-relative">
+      <div class="position-absolute start-50 mt-custome translate-middle text-center text-white d-flex flex-column align-items-center">
+          <p class="fs-1 fw-bold mb-4 text-white">تسجيل الدخول إلى حسابك </p>
+          <p class="fs-4 fw-bold mb-4 text-white">خصم 20% على برنامج إدارة المكاتب الهندسية .. العرض لفترة محدودة</p>
+
+   
+      </div>
+  </div>  
+  <div class="container w-75" style="margin-top: -320px;" id="login">
+    <div class="row ">
+      <div class="col-md-6 d-flex flex-column align-items-center">
+          <!-- Navigation Buttons -->
+        <div style="margin-left: 12rem;" class="mb-5">
+            <ul class="nav nav-pills ">
+                
+                <li class="nav-item">
+                  <button 
+                    class="nav-link" 
+                    [class.active]="!isLoginForm" 
+                    (click)="toggleForm(false)">
+                    إنشاء حساب
+                  </button>
+                </li>
+
+                <li class="nav-item">
+                  <button 
+                    class="nav-link" 
+                    [class.active]="isLoginForm" 
+                    (click)="toggleForm(true)">
+                    تسجيل الدخول
+                  </button>
+                </li>
+              </ul>
+
+        </div>
+  
+        <!-- Login Form -->
+        <form *ngIf="isLoginForm" (ngSubmit)="onLoginSubmit()" class="w-75 ">
+          <p class=" text-blue text-center mb-3 title">تسجيل الدخول</p>
+          <p class=" text-center paragraph mb-3" style="color: #445781;">
+            مع برنامج EOM هتقدر تتابع كل تفاصيل مكتبك لحظة بلحظة من أي مكان، تدير مشاريعك بكفاءة، وتقلل الأخطاء، وتدير عملائك وتزيد أرباحك.
+          </p>
+          <div class="mb-3">
+            <label for="login-username" class="form-label text-blue fw-semibold">اسم المستخدم أو البريد الإلكتروني </label>
+            <input 
+              type="text" 
+              id="login-username" 
+              class="form-control input-bg"
+              [(ngModel)]="loginData.username"
+              name="username" 
+              required
+              >
+          </div>
+          <div class="mb-3">
+            <label for="login-password" class="form-label text-blue fw-semibold">كلمة المرور</label>
+            <input 
+             type="password" 
+             id="login-password" 
+             class="form-control input-bg" 
+             [(ngModel)]="loginData.password" 
+             name="password" 
+             required
+             >
+          </div>
+          <div class="mb-3 form-check ">
+            <input 
+             type="checkbox" 
+             class="form-check-input" 
+             id="rememberMe" 
+             [(ngModel)]="loginData.rememberMe" 
+             name="rememberMe"
+             >
+            <label class="form-check-label text-blue fw-semibold" for="rememberMe">تذكر كلمة المرور </label>
+          </div>
+          <div class="text-center mb-5">
+            <button type="submit" class="btn button1">تسجيل </button>
+          </div>
+        </form>
+  
+        <!-- Register Form -->
+        <form *ngIf="!isLoginForm" (ngSubmit)="onRegisterSubmit()" class="w-75 ">
+          <p class=" text-blue  text-center mb-3  title">إنشاء حساب جديد </p>
+          <p class="mb-3  text-center paragraph" style="color: #445781;">
+            يرجى ملء النموذج لإنشاء حساب جديد.          
+        </p>
+          <div class="mb-2">
+            <label for="register-email" class="form-label text-blue fw-semibold">البريد الإلكتروني </label>
+            <input 
+             type="email" 
+             id="register-email" 
+             class="form-control input-bg"
+             [(ngModel)]="registerData.email" 
+             name="email" 
+             required
+             >
+          </div>
+          <div class="mb-2">
+            <label for="register-username" class="form-label text-blue fw-semibold">اسم المستخدم</label>
+            <input 
+             type="text" 
+             id="register-username" 
+             class="form-control input-bg"
+             [(ngModel)]="registerData.username"
+             name="username"
+             required
+             >
+          </div>
+          <div class="mb-2">
+            <label for="register-password" class="form-label text-blue fw-semibold">كلمة المرور</label>
+            <input 
+             type="password" 
+             id="register-password" 
+             class="form-control input-bg" 
+             [(ngModel)]="registerData.password" 
+             name="password" 
+             required
+             >
+
+          </div>
+          <div class="mb-2">
+            <label for="register-confirm-password" class="form-label text-blue fw-semibold">تأكيد كلمة المرور </label>
+            <input 
+             type="password" 
+             id="register-confirm-password" 
+             class="form-control input-bg" 
+             [(ngModel)]="registerData.confirmPassword" 
+             name="confirmPassword" 
+             required
+             >
+          </div>
+          <div class="text-center ">
+            <button type="submit" class="btn button1">تسجيل</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- image -->
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img src="../../../assets/images/home/contact-us/contact-creative.jpg" alt="Welcome Image" class="img-fluid" style="max-width: 100%; border-radius: 8px;">
+      </div>
+    </div>
+  </div>
+    
+  </div>
+  <br><br><br>
+  
+  <app-pop-up-offers></app-pop-up-offers>
+<app-footer></app-footer>

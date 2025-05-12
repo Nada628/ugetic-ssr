@@ -1,0 +1,79 @@
+<app-navigation-bar></app-navigation-bar>
+<app-header
+ class="mb-5" 
+ [headerKey]="dynamicSectionData.headerKey"
+    [rotatingTextKeys]="dynamicSectionData.rotatingTextKeys"
+    [staticTextKey]="dynamicSectionData.staticTextKey"
+    [watchButtonKey]="dynamicSectionData.watchButtonKey"
+    [downloadButtonKey]="dynamicSectionData.downloadButtonKey"
+    [imageUrl]="dynamicSectionData.imageUrl"
+    (downloadFile)="downloadFile()"
+
+ >
+</app-header>
+<app-trusted-by class="mt-5"></app-trusted-by>
+<app-discount-section></app-discount-section>
+<!-- <app-side-bar></app-side-bar> -->
+<app-eom-feature1 
+  id="features"
+  [headerTextKey]="'eom-feature-one.header'"
+  [paragraphTextKey]="'eom-feature-one.p'"
+  [cards]="featureCards"
+></app-eom-feature1>
+<app-eom-feature-two-three id="apps"  ></app-eom-feature-two-three>
+
+<app-tabs [tabs]="tabsData"
+          [tabsMetadata]="tabsMetadata"
+          parentComponent="eomComponent">
+</app-tabs>
+
+<app-dynamic-services-card
+
+  [title]="'أدر مشاريعك مع المكاتب الأخرى'"
+  [desc1]="'يوفر لك مديول الدعم الهندسي في برنامج مكتبك الهندسي، القدرة على الاستعانة بمكاتب أخرى أو موظفين يعملون بنظام العمل عن البعد أو الدوام الجزئي؛ لإنجاز بعض المهام الهندسية الخاصة بمشاريع عملائك'"
+  [desc2]="'ويمنحك القدرة على إرسال واستقبال المشاريع حسب الاتفاقيات التي تتم مع المكاتب الأخرى'"
+  
+  [card1Title]="'تقارير عن حالة العمل مفصلة لكل مشروع'"
+  [card1Desc1]="'مخطط زمني لكل تطورات ومراحل المشاريع'"
+
+  [card2Title]="'نظام متابعة العمل مثل التحكم في أجهزة الموظفين. '"
+  [card2Desc1]="'نظام مميز لإدارة طلعات الإشراف الهندسي'"
+ 
+
+  [card3Title]="'نظام لإدارة مهندسي الإشراف الهندسي من خلال الموقع الجغرافي.'"
+  [card3Desc1]="'نظام إدارة التقارير الهندسية'"
+
+></app-dynamic-services-card>
+
+<app-reviews id="reviews"></app-reviews>
+<app-block-faq
+  [title]="'الأسئلة الشائعة '"
+  [faqs]="[
+    { question: 'ما هو برنامج إدارة المكاتب الهندسية EOM ؟', 
+     answer: 'هو نظام متكامل يهدف إلى إدارة وتنسيق كافة العمليات والأنشطة داخل المكتب الهندسي، مثل إدارة العملاء، والمشاريع، والموارد المالية، والفواتير من خلال نظام محاسبي مميز، بجانب إدارة العقود والموظفبن.' },
+    
+     { question: 'ما هي مميزات برنامج إدارة المكاتب الهندسية من يوجتيك؟ ',
+      answer: 'يوفر برنامج EOM واجهة مستخدم بسيطة وسلسلة في التعامل بجانب العديد من المميزات مثل إدارة المشاريع والإشراف والدعم الهندسي وتقارير عن حالة العملاء ونسب الإنجاز في مشروعاتهم، ومتابعة التغييرات وطلبات العملاء في مشروعاتهم، بجانب إصدار الفواتير المستحقة، إمكانية تصميم موقع وتطبيق باسم العلامة التجارية، نظام إدارة العقود والطلعات وغيرها من المميزات الرائعة.' },
+    
+    { question: 'هل يمكن استخدام نظام إدارة المكاتب الهندسية على الهواتف؟ ',
+      answer: 'نعم، يمكن للجميع سواء كانوا موظفين داخل المكتب الهندسي او خارجه متابعة خطة سير العمل على المشروعات الهندسية من أي مكان وفي أي وقت من خلال هواتفهم، ويمكن لعملائك متابعة ما تم إنجازه من مشروعها بشكل فوري ومن الموافقات أو ترك تنبيهات أو تعليقات في كل مرحلة من مراحل مشروعاتهم.' },
+
+      {question:'كيف يمكن إدارة حسابات المكاتب الهندسية بفعالية؟',
+      answer:'يوفر برنامج إدارة مكتبك الهندسي نظام محاسبي مبسط يمكنك من  إدارة جميع العمليات الحسابية اليومية من خلاله، وإصدار الفواتير جدولتها، وإرسال إشعارات استحقاقها للعملاء، كما أنه يساعدك على إدارة جميع الإلتزامات المالية الخاصة بالمكتب الهندسي.'}
+  ]"
+  imageSrc="../../../assets/images/home/faq/faq.jpg"
+></app-block-faq>
+
+<!-- call-to-action -->
+<app-home-call-to-action
+ [title]="'أنشئ حسابك الآن واحصل على خصم 20% عند شراء برنامج إدارة المكاتب الهندسية، اغتنم الفرصة الآن، العرض لفترة محدودة.'"
+ [button]="'إنشا حسابك'"
+>
+
+</app-home-call-to-action>
+
+<app-pop-up-offers></app-pop-up-offers>
+
+<app-footer class="footer" id="contact"></app-footer>
+
+

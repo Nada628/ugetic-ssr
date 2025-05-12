@@ -1,0 +1,45 @@
+<nav class="top-navbar" [ngClass]="{'d-none': !isNavbarVisible, 'mobile-scrolled': isScrolled, 'navbar-alt': isAltStyle}">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      
+      <div class="col-6 col-md-8">
+        <div class="text-white">
+          <ul class="d-flex list-unstyled mb-0 contact-icons">
+            
+  <li class="me-3 icon-item">
+    <a href="tel:01070714795">
+      <i class="fas fa-phone ms-md-2"></i>
+      <span class="d-none d-md-inline ms-md-3">01070714795</span>
+    </a>
+  </li>
+  <li class="me-3 icon-item">
+    <a href="mailto:info@ugitec.com">
+      <i class="fas fa-envelope  ms-md-2"></i>
+      <span class="d-none d-md-inline ms-md-3">info&#64;ugitec.com</span>
+    </a>
+  </li>
+  <li class="me-3 icon-item">
+    <i class="bi bi-clock  ms-md-2"></i>
+    <span class="d-none d-md-inline ms-md-3">Sun - Thu: 9:00 - 17:00</span>
+  </li>
+</ul>
+
+        </div>
+      </div>
+
+
+      <div class="col-6 col-md-4">
+        <div class="d-flex justify-content-end align-items-center social-icons">
+          <a *ngFor="let icon of social" [href]="icon.link" target="_blank" class="icon icon-item">
+            <i class="fab fa-facebook-f" *ngIf="icon.name === 'facebook'"></i>
+            <i class="fab fa-twitter" *ngIf="icon.name === 'X'"></i>
+            <i class="fab fa-linkedin-in" *ngIf="icon.name === 'linkedin'"></i>
+            <i class="fa-brands fa-youtube" *ngIf="icon.name === 'youtube'"></i>
+            <i class="fa-brands fa-instagram" *ngIf="icon.name === 'instagram'"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>

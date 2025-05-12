@@ -1,0 +1,73 @@
+
+<div class="container mt-5" [ngClass]="parentComponent">
+  <div  *ngFor="let tabMetadata of tabsMetadata" >
+    <div class="row">
+      <div class="text-center">
+        <p 
+          class="text-center text-blue"
+          [ngClass]="{
+            'fw-bold fs-3 mt-5': parentComponent === 'ServicesComponent',
+            'fw-semibold fs-4': parentComponent !== 'ServicesComponent'
+          }"
+        >
+        {{ tabMetadata.header | translate }}
+      </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="text-center">
+        <p class="text-center text-blue " 
+          [ngClass]="{
+            'fw-semibold fs-4': parentComponent === 'ServicesComponent',
+            'fw-bold fs-5': parentComponent === 'StoreComponent' || parentComponent === 'AppsComponent' ,
+            'fw-bold fs-1': parentComponent === 'HomeComponent',
+            'fw-bold fs-4': parentComponent === 'eomComponent'
+          }"
+
+        > 
+
+          {{ tabMetadata.paragraph | translate}}
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row mt-5 g-5" 
+   [ngClass]="{
+    'mx-4': parentComponent === 'ServicesComponent',
+   }">
+    <!-- tabs -->
+    <div class="col-lg-4 col-sm-9 order-2 order-md-1">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div
+          *ngFor="let tab of tabs"
+          class="card mb-3"
+          [ngClass]="{'active': selectedTab === tab.id, 'deselected': selectedTab !== tab.id}"
+          (click)="selectTab(tab.id)"
+        >
+          <a class="nav-link" role="tab">
+            <div class="card-body">
+              <h6 class="card-title text-blue fw-bold">{{tab.titleKey | translate}}</h6>
+              <p class="card-text text-secondary mt-3 fw-semibold">{{tab.descKey | translate}}</p>
+            </div>
+          </a>
+          <div class="border-anim"></div>
+        </div>
+      </div>
+    </div>
+     <!-- imgs -->
+    <div class="col-lg-8 col-sm-9 order-1 order-md-2">
+      <div *ngFor="let tab of tabs"  >
+        <img *ngIf="selectedTab === tab.id" 
+            [src]="tab.imageUrl" 
+            class=" shadow-lg" 
+            [alt]="'Image for ' + tab.titleKey"
+            [ngClass]="{
+              'services-tab-img': parentComponent == 'ServicesComponent',
+              'home-tab-img': parentComponent == 'HomeComponent'|| parentComponent == 'eomComponent' || parentComponent == 'StoreComponent'|| parentComponent == 'AppsComponent',
+            }">
+      </div>
+    </div>
+  </div>
+</div>
